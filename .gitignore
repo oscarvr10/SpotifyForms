@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -10,3 +10,7 @@
 /SpotifyForms/SpotifyForms/obj
 /.vs/SpotifyForms/v15/Server/sqlite3
 /SpotifyForms/SpotifyForms/bin/Debug/netstandard2.0
+.vs/ProjectSettings.json
+.vs/SpotifyForms/v15/.suo
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
