@@ -162,16 +162,7 @@ namespace SpotifyForms.Core.Services.Navigation
 
             if (navigationPage != null)
             {
-                if (navigationPage.Navigation.NavigationStack.Count > 1)
-                {
-                    await RemoveLastFromBackStackAsync();
-                }
-                else
-                {
-                    var page = navigationPage.Navigation.NavigationStack[0];
-                    navigationPage.Navigation.RemovePage(page);
-                }
-                
+                await RemoveLastFromBackStackAsync();
                 return true;
             }
 
