@@ -7,7 +7,7 @@
         <StackLayout>
             <Label
                 HorizontalOptions="CenterAndExpand"
-                Text="Search"
+                Text="Búsqueda"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

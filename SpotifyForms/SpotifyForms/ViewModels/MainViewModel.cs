@@ -19,7 +19,7 @@ namespace SpotifyForms.Core.ViewModels
         #endregion
 
         #region Commands
-        public ICommand NavigateToMyLibraryCommand { get; set; }
+        public ICommand NavigateToAlbumDetailCommand { get; set; }
 
         #endregion
         public MainViewModel()
@@ -29,7 +29,7 @@ namespace SpotifyForms.Core.ViewModels
 
         void SetCommands()
         {
-            NavigateToMyLibraryCommand = new Command(async() => await NavigateToMyLibrary());
+            NavigateToAlbumDetailCommand = new Command(async() => await NavigateToAlbumDetail());
         }
 
         
@@ -45,9 +45,9 @@ namespace SpotifyForms.Core.ViewModels
 
         #region Command Methods
 
-        private async Task NavigateToMyLibrary()
+        private async Task NavigateToAlbumDetail()
         {
-            await NavigationService.NavigateToAsync<MyLibraryViewModel>();
+            await NavigationService.NavigateToAsync<AlbumDetailViewModel>();
         }
 
         #endregion

@@ -8,5 +8,5 @@
     viewModelBase:ViewModelLocator.AutoWireViewModel="True">
     <views:HomeView Title="Inicio" />
     <views:SearchView Title="Buscar" />
-
+    <views:MyLibraryView Title="Mi Biblioteca" />
 </TabbedPage>

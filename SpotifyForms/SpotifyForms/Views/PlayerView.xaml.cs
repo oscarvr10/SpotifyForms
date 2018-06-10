@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace SpotifyForms.Core.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SearchView : ContentPage
+	public partial class PlayerView : ContentPage
 	{
-		public SearchView()
+		public PlayerView()
 		{
 			InitializeComponent();
 		}

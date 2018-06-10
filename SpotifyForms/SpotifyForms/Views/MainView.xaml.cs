@@ -6,9 +6,9 @@ namespace SpotifyForms.Core.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainView : TabbedPage
 	{
-		public MainView ()
+		public MainView()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 	}
 }

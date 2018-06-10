@@ -7,9 +7,9 @@
         <StackLayout>
             <Label
                 HorizontalOptions="CenterAndExpand"
-                Text="Home"
+                Text="Inicio"
                 VerticalOptions="CenterAndExpand" />
-            <Button Command="{Binding NavigateToMyLibraryCommand}" Text="Navegar" />
+            <Button Command="{Binding NavigateToAlbumDetailCommand}" Text="Navegar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

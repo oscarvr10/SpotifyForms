@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 namespace SpotifyForms.Core.ViewModels
 {
-    public class MyLibraryViewModel : BaseViewModel
+    public class AlbumDetailViewModel : BaseViewModel
     {
-        public MyLibraryViewModel()
+        public AlbumDetailViewModel()
         {
 
         }
