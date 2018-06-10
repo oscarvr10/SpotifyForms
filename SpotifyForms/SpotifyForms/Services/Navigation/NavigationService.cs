@@ -1,4 +1,4 @@
-﻿using SpotifyForms.Core.ViewModels;
+﻿using SpotifyForms.Core.ViewModels.Base;
 using SpotifyForms.Core.Views;
 using System;
 using System.Globalization;

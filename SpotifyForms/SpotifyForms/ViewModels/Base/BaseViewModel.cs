@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace SpotifyForms.Core.ViewModels
+namespace SpotifyForms.Core.ViewModels.Base
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

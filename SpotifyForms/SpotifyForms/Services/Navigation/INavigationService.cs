@@ -1,4 +1,4 @@
-﻿using SpotifyForms.Core.ViewModels;
+﻿using SpotifyForms.Core.ViewModels.Base;
 using System.Threading.Tasks;
 
 namespace SpotifyForms.Core.Services.Navigation

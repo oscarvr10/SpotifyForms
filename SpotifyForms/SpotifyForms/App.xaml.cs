@@ -1,23 +1,25 @@
-using System;
+using SpotifyForms.Core.Services.Navigation;
+using SpotifyForms.Core.ViewModels.Base;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpotifyForms.Core
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
-		public App ()
+		public App()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            InitApp();
 		}
 
-		protected override void OnStart ()
+		protected override async void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            // Handle when your app starts
+            await InitNavigation();
+        }
 
 		protected override void OnSleep ()
 		{
@@ -28,5 +30,16 @@ namespace SpotifyForms.Core
 		{
 			// Handle when your app resumes
 		}
-	}
+
+        private void InitApp()
+        {
+            ViewModelLocator.RegisterDependencies();
+        }
+
+        Task InitNavigation()
+        {
+            var navigationService = ViewModelLocator.Resolve<INavigationService>();
+            return navigationService.NavigateToAsync<ViewModels.MainViewModel>();
+        }
+    }
 }
