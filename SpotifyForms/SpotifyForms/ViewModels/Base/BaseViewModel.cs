@@ -1,6 +1,11 @@
-﻿using System.ComponentModel;
+﻿using SpotifyForms.Core.Services.Navigation;
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace SpotifyForms.Core.ViewModels.Base
 {
@@ -22,11 +27,26 @@ namespace SpotifyForms.Core.ViewModels.Base
             set { _isLoading = value; }
         }
 
+        protected readonly INavigationService NavigationService;
+        public ICommand GoBackCommand { get; set; }
 
         #endregion
         public BaseViewModel()
         {
+            NavigationService = ViewModelLocator.Resolve<INavigationService>();
+            GoBackCommand = new Command(async () => await GoBackAsync());
+        }
 
+        async Task GoBackAsync()
+        {
+            try
+            {
+                await NavigationService.GoBackAsync();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
 
         public virtual Task InitializeAsync(object navigationData)

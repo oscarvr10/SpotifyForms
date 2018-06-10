@@ -10,5 +10,6 @@ namespace SpotifyForms.Core.Services.Navigation
         Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : BaseViewModel;
         Task RemoveLastFromBackStackAsync();
         Task RemoveBackStackAsync();
+        Task<bool> GoBackAsync(object parameter = null);
     }
 }

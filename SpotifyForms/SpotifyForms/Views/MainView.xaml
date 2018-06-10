@@ -5,8 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewModelBase="clr-namespace:SpotifyForms.Core.ViewModels.Base;assembly=SpotifyForms.Core"
     xmlns:views="clr-namespace:SpotifyForms.Core.Views"
-    viewModelBase:ViewModelLocator.AutoWireViewModel="true">
+    viewModelBase:ViewModelLocator.AutoWireViewModel="True">
     <views:HomeView Title="Inicio" />
     <views:SearchView Title="Buscar" />
-    <views:MyLibraryView Title="Mi Librería" />
+
 </TabbedPage>

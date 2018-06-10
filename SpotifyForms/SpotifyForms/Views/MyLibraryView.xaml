@@ -2,13 +2,16 @@
 <ContentPage
     x:Class="SpotifyForms.Core.Views.MyLibraryView"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModelBase="clr-namespace:SpotifyForms.Core.ViewModels.Base;assembly=SpotifyForms.Core"
+    viewModelBase:ViewModelLocator.AutoWireViewModel="True">
     <ContentPage.Content>
         <StackLayout>
             <Label
                 HorizontalOptions="CenterAndExpand"
                 Text="My Library"
                 VerticalOptions="CenterAndExpand" />
+            <Button Command="{Binding GoBackCommand}" Text="Navegar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

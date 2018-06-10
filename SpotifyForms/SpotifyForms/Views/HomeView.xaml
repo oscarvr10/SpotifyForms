@@ -9,6 +9,7 @@
                 HorizontalOptions="CenterAndExpand"
                 Text="Home"
                 VerticalOptions="CenterAndExpand" />
+            <Button Command="{Binding NavigateToMyLibraryCommand}" Text="Navegar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

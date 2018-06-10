@@ -1,7 +1,10 @@
 ﻿using SpotifyForms.Core.Models;
 using SpotifyForms.Core.ViewModels.Base;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace SpotifyForms.Core.ViewModels
 {
@@ -16,15 +19,20 @@ namespace SpotifyForms.Core.ViewModels
         #endregion
 
         #region Commands
-        
+        public ICommand NavigateToMyLibraryCommand { get; set; }
 
         #endregion
         public MainViewModel()
         {
-
+            SetCommands();
         }
 
+        void SetCommands()
+        {
+            NavigateToMyLibraryCommand = new Command(async() => await NavigateToMyLibrary());
+        }
 
+        
         #region Base Methods
 
         public override Task InitializeAsync(object navigationData)
@@ -36,7 +44,12 @@ namespace SpotifyForms.Core.ViewModels
 
 
         #region Command Methods
-        
+
+        private async Task NavigateToMyLibrary()
+        {
+            await NavigationService.NavigateToAsync<MyLibraryViewModel>();
+        }
+
         #endregion
 
     }

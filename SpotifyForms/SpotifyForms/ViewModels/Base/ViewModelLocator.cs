@@ -37,6 +37,7 @@ namespace SpotifyForms.Core.ViewModels.Base
 
             // View models
             builder.RegisterType<MainViewModel>();
+            builder.RegisterType<MyLibraryViewModel>();
 
             // Services
             builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();

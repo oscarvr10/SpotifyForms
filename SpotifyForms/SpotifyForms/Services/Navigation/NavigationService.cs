@@ -11,7 +11,7 @@ namespace SpotifyForms.Core.Services.Navigation
     public class NavigationService : INavigationService
     {
         /// <summary>
-        /// Gets the last ViewModel that was navigated
+        /// Gets the previous ViewModel that was navigated.
         /// </summary>
         public BaseViewModel PreviousPageViewModel
         {
@@ -47,7 +47,7 @@ namespace SpotifyForms.Core.Services.Navigation
 
 
         /// <summary>
-        /// Removes the previous page from the navigation stack.
+        /// Removes the last page from the navigation stack.
         /// </summary>
         /// <returns></returns>
         public Task RemoveLastFromBackStackAsync()
@@ -57,7 +57,7 @@ namespace SpotifyForms.Core.Services.Navigation
             if (mainPage != null)
             {
                 mainPage.Navigation.RemovePage(
-                    mainPage.Navigation.NavigationStack[mainPage.Navigation.NavigationStack.Count - 2]);
+                    mainPage.Navigation.NavigationStack[mainPage.Navigation.NavigationStack.Count - 1]);
             }
 
             return Task.FromResult(true);
@@ -88,7 +88,7 @@ namespace SpotifyForms.Core.Services.Navigation
         #region Internal Methods
 
         /// <summary>
-        /// Performs navigation to a specified ViewModel
+        /// Performs navigation to a specified ViewModel.
         /// </summary>
         /// <param name="viewModelType">The ViewModel type</param>
         /// <param name="parameter">Parameters to send</param>
@@ -109,7 +109,7 @@ namespace SpotifyForms.Core.Services.Navigation
 
 
         /// <summary>
-        /// Gets the Type from specific ViewModel using reflection
+        /// Gets the Type from specific ViewModel using reflection.
         /// </summary>
         /// <param name="viewModelType">The ViewModel type</param>
         /// <returns></returns>
@@ -124,7 +124,7 @@ namespace SpotifyForms.Core.Services.Navigation
 
 
         /// <summary>
-        /// Creates a Page by its specific ViewModel
+        /// Creates a Page by its specific ViewModel.
         /// </summary>
         /// <param name="viewModelType">The ViewModel type</param>
         /// <param name="parameter">The parameters to send</param>
@@ -139,6 +139,42 @@ namespace SpotifyForms.Core.Services.Navigation
             return page;
         }
 
+        /// <summary>
+        /// Navigates to the previous page from navigation stack.
+        /// </summary>
+        /// <returns></returns>
+        public Task<bool> GoBackAsync(object parameter = null)
+        {
+            return InternalGoBackAsync(parameter);
+        }
+
+        /// <summary>
+        /// Performs navigation to the last Page from navigation stack.
+        /// </summary>
+        /// <param name="viewModelType">The ViewModel type</param>
+        /// <param name="parameter">Parameters to send</param>
+        /// <returns></returns>
+        private async Task<bool> InternalGoBackAsync(object parameter)
+        {
+            var navigationPage = Application.Current.MainPage as CustomNavigationView;
+
+            if (navigationPage != null)
+            {
+                if (navigationPage.Navigation.NavigationStack.Count > 1)
+                {
+                    await RemoveLastFromBackStackAsync();
+                }
+                else
+                {
+                    var page = navigationPage.Navigation.NavigationStack[0];
+                    navigationPage.Navigation.RemovePage(page);
+                }
+                
+                return true;
+            }
+
+            return false;
+        }
         #endregion
     }
 }
