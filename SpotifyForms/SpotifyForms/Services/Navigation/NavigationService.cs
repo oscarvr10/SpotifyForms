@@ -85,6 +85,16 @@ namespace SpotifyForms.Core.Services.Navigation
         }
 
 
+        /// <summary>
+        /// Navigates to the previous page from navigation stack.
+        /// </summary>
+        /// <returns></returns>
+        public Task<bool> GoBackAsync(object parameter = null)
+        {
+            return InternalGoBackAsync(parameter);
+        }
+
+
         #region Internal Methods
 
         /// <summary>
@@ -139,14 +149,6 @@ namespace SpotifyForms.Core.Services.Navigation
             return page;
         }
 
-        /// <summary>
-        /// Navigates to the previous page from navigation stack.
-        /// </summary>
-        /// <returns></returns>
-        public Task<bool> GoBackAsync(object parameter = null)
-        {
-            return InternalGoBackAsync(parameter);
-        }
 
         /// <summary>
         /// Performs navigation to the last Page from navigation stack.
