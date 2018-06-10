@@ -9,4 +9,16 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.550146" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\CustomNavigationView.xaml.cs">
+      <DependentUpon>CustomNavigationView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\CustomNavigationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
