@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="SpotifyForms.Core.Views.MainView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModelBase="clr-namespace:SpotifyForms.Core.ViewModels.Base;assembly=SpotifyForms.Core"
+    xmlns:views="clr-namespace:SpotifyForms.Core.Views"
+    viewModelBase:ViewModelLocator.AutoWireViewModel="true">
+    <views:HomeView Title="Inicio" />
+    <views:SearchView Title="Buscar" />
+    <views:MyLibraryView Title="Mi Librería" />
+</TabbedPage>
