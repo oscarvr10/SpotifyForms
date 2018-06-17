@@ -94,6 +94,9 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Fonts\circular_bold.ttf" />
+    <BundleResource Include="Resources\Fonts\circular_book.ttf" />
+    <BundleResource Include="Resources\Fonts\circular_medium.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
