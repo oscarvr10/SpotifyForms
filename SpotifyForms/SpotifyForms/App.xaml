@@ -3,5 +3,41 @@
     x:Class="SpotifyForms.Core.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Application.Resources />
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--  Styles for common elements  -->
+            <Style TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>CircularSpotifyTxT-Book</OnPlatform.iOS>
+                            <OnPlatform.Android>circular_book.ttf#CircularSpotifyTxT-Book</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--  Styles for common elements  -->
+            <Style x:Key="BoldLabel" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>CircularSpotifyTxT-Bold</OnPlatform.iOS>
+                            <OnPlatform.Android>circular_bold.ttf#CircularSpotifyTxT-Bold</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="MediumLabel" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>CircularSpotifyTxT-Med</OnPlatform.iOS>
+                            <OnPlatform.Android>circular_medium.ttf#CircularSpotifyTxT-Med</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

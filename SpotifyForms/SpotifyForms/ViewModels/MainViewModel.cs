@@ -1,4 +1,5 @@
-﻿using SpotifyForms.Core.Models;
+﻿using SpotifyForms.Core.Data;
+using SpotifyForms.Core.Models;
 using SpotifyForms.Core.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace SpotifyForms.Core.ViewModels
         public MainViewModel()
         {
             SetCommands();
+            InitData();
         }
 
         void SetCommands()
@@ -32,6 +34,13 @@ namespace SpotifyForms.Core.ViewModels
             NavigateToAlbumDetailCommand = new Command(async() => await NavigateToAlbumDetail());
         }
 
+        void InitData()
+        {
+            Albums = MockDataService.GetAlbumsData();
+            Playlists = MockDataService.GetPlaylistsData();
+            Songs = MockDataService.GetSongsData();
+        }
+        
         
         #region Base Methods
 
