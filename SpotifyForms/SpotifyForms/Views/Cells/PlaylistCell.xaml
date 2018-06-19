@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell
+    x:Class="SpotifyForms.Core.Views.Cells.PlaylistCell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout
+        Padding="6"
+        HeightRequest="130"
+        Orientation="Horizontal">
+        <Image
+            HeightRequest="120"
+            HorizontalOptions="Start"
+            Source="{Binding ImageUrl}"
+            WidthRequest="120" />
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label
+                Margin="10,0"
+                FontSize="Medium"
+                LineBreakMode="TailTruncation"
+                Style="{StaticResource BoldLabel}"
+                Text="{Binding Name}"
+                TextColor="White" />
+            <StackLayout Margin="10,0" Orientation="Horizontal">
+                <ContentView
+                    Padding="6,2"
+                    BackgroundColor="#2779dd"
+                    WidthRequest="18">
+                    <Image Source="icon_shuffle.png" />
+                </ContentView>
+                <Label
+                    FontSize="Small"
+                    LineBreakMode="TailTruncation"
+                    Style="{StaticResource BoldLabel}"
+                    Text="{Binding Editor, StringFormat='de {0}'}"
+                    TextColor="#adaeb2" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ViewCell>
