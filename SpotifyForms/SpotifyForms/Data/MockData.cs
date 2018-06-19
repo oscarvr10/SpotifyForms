@@ -9,11 +9,11 @@ namespace SpotifyForms.Core.Data
         {
             return new List<Playlist>
             {
-                    new Playlist(){ Name="Funk Rock", NrOfFollowers=49205, ImageUrl="https://i.scdn.co/image/a9cdead5cf5d85a33e7bc12b49d1006821650ca4"},
-                    new Playlist(){ Name="Rock Solid", NrOfFollowers=5025, ImageUrl="https://i.scdn.co/image/993ea43e0521938d5bf7a4fbe4f349acf6500975"},
-                    new Playlist(){ Name="This Is: Muse", NrOfFollowers=2140415, ImageUrl="https://i.scdn.co/image/3770c6d556b864e60684d0706013ff08dac76918"},
-                    new Playlist(){ Name="100% Scooter", NrOfFollowers=7447, ImageUrl="https://i.scdn.co/image/98cc42f3671e7c14b2593cce05cf2abb87247ab2"},
-                    new Playlist(){ Name="Feeling Good, Feeling Great", NrOfFollowers=250211, ImageUrl="https://i.scdn.co/image/9c003edf2bcc3386c400d087b3bb4adb75ee1f5a"},
+                    new Playlist(){ Name="Funk Rock", NrOfFollowers=49205, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/a9cdead5cf5d85a33e7bc12b49d1006821650ca4"},
+                    new Playlist(){ Name="Rock Solid", NrOfFollowers=5025, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/993ea43e0521938d5bf7a4fbe4f349acf6500975"},
+                    new Playlist(){ Name="This Is: Muse", NrOfFollowers=2140415, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/3770c6d556b864e60684d0706013ff08dac76918"},
+                    new Playlist(){ Name="100% Scooter", NrOfFollowers=7447, Editor="Spotify México", ImageUrl="https://www.geek.com/wp-content/uploads/2015/11/dirty-dubstep-dangle.jpeg"},
+                    new Playlist(){ Name="Feeling Good, Feeling Great", NrOfFollowers=250211, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/9c003edf2bcc3386c400d087b3bb4adb75ee1f5a"},
             };
         }
 

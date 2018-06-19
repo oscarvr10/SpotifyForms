@@ -2,14 +2,113 @@
 <ContentPage
     x:Class="SpotifyForms.Core.Views.HomeView"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls;assembly=SpotifyForms.Core"
+    BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Inicio"
-                VerticalOptions="CenterAndExpand" />
-            <Button Command="{Binding NavigateToAlbumDetailCommand}" Text="Navegar" />
-        </StackLayout>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid RowSpacing="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource BoldLabel}"
+                    Text="Escuchadas recientemente"
+                    TextColor="White" />
+                <controls:HorizontalScrollView
+                    Grid.Row="1"
+                    HeightRequest="240"
+                    ItemsSource="{Binding Playlists}"
+                    Orientation="Horizontal">
+                    <controls:HorizontalScrollView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="5,0" WidthRequest="180">
+                                    <Image
+                                        HeightRequest="180"
+                                        HorizontalOptions="Start"
+                                        Source="{Binding ImageUrl}"
+                                        WidthRequest="180" />
+                                    <StackLayout
+                                        Margin="0,5"
+                                        HorizontalOptions="Center"
+                                        Orientation="Horizontal">
+                                        <ContentView
+                                            Padding="6,2"
+                                            BackgroundColor="#2779dd"
+                                            WidthRequest="18">
+                                            <Image Source="icon_shuffle.png" />
+                                        </ContentView>
+                                        <Label
+                                            FontSize="Medium"
+                                            HorizontalTextAlignment="Center"
+                                            LineBreakMode="TailTruncation"
+                                            Style="{StaticResource BoldLabel}"
+                                            Text="{Binding Name}"
+                                            TextColor="White" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </controls:HorizontalScrollView.ItemTemplate>
+                </controls:HorizontalScrollView>
+                <Label
+                    Grid.Row="3"
+                    Margin="0,0,0,10"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource BoldLabel}"
+                    Text="Creados para ti"
+                    TextColor="White" />
+                <controls:HorizontalScrollView
+                    Grid.Row="4"
+                    ItemsSource="{Binding Albums}"
+                    Orientation="Vertical">
+                    <controls:HorizontalScrollView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="20" RowSpacing="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".5*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width=".5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                        Grid.Column="1"
+                                        Aspect="AspectFit"
+                                        Source="{Binding ImageUrl}" />
+                                    <StackLayout Grid.Row="1" Grid.Column="1">
+                                        <Label
+                                            FontSize="Medium"
+                                            HorizontalTextAlignment="Center"
+                                            LineBreakMode="TailTruncation"
+                                            Style="{StaticResource BoldLabel}"
+                                            Text="{Binding Artist}"
+                                            TextColor="White" />
+                                        <Label
+                                            Margin="0,-5,0,0"
+                                            FontSize="Small"
+                                            HorizontalTextAlignment="Center"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Name}"
+                                            TextColor="#adaeb2" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </controls:HorizontalScrollView.ItemTemplate>
+                </controls:HorizontalScrollView>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
