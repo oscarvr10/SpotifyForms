@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell
+    x:Class="SpotifyForms.Core.Views.Cells.AlbumCell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout
+        Padding="6"
+        HeightRequest="130"
+        Orientation="Horizontal">
+        <Image
+            HeightRequest="120"
+            HorizontalOptions="Start"
+            Source="{Binding ImageUrl}"
+            WidthRequest="120" />
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label
+                Margin="10,0"
+                FontSize="Medium"
+                LineBreakMode="TailTruncation"
+                Style="{StaticResource BoldLabel}"
+                Text="{Binding Name}"
+                TextColor="White" />
+            <Label
+                Margin="10,0"
+                FontSize="Small"
+                LineBreakMode="TailTruncation"
+                Style="{StaticResource BoldLabel}"
+                Text="{Binding Artist}"
+                TextColor="#adaeb2" />
+        </StackLayout>
+    </StackLayout>
+</ViewCell>
