@@ -4,11 +4,11 @@ using Xamarin.Forms.Xaml;
 namespace SpotifyForms.Core.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MyLibraryView : TabbedPage
+	public partial class PlaylistsView : ContentPage
 	{
-		public MyLibraryView()
+		public PlaylistsView ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 		}
 	}
 }
