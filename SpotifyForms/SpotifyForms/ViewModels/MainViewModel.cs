@@ -1,7 +1,6 @@
 ﻿using SpotifyForms.Core.Data;
 using SpotifyForms.Core.Models;
 using SpotifyForms.Core.ViewModels.Base;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -16,6 +15,8 @@ namespace SpotifyForms.Core.ViewModels
         public List<Album> Albums { get; set; }
         public List<Playlist> Playlists { get; set; }
         public List<Song> Songs { get; set; }
+        public List<Artist> Artists { get; set; }
+        public List<Podcast> Podcasts { get; set; }
 
         #endregion
 
@@ -36,9 +37,11 @@ namespace SpotifyForms.Core.ViewModels
 
         void InitData()
         {
-            Albums = MockDataService.GetAlbumsData();
-            Playlists = MockDataService.GetPlaylistsData();
-            Songs = MockDataService.GetSongsData();
+            Albums = MockDataService.GetAlbums();
+            Playlists = MockDataService.GetPlaylists();
+            Songs = MockDataService.GetSongs();
+            Artists = MockDataService.GetArtists();
+            Podcasts = MockDataService.GetPodcasts();
         }
         
         
