@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="SpotifyForms.Core.Views.SearchView"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="Black">
     <ContentPage.Content>
         <StackLayout>
             <Label
