@@ -25,6 +25,15 @@ namespace SpotifyForms.Core.Views.Controls
             set { SetValue(ItemTemplateProperty, value); }
         }
 
+        public static readonly BindableProperty HeaderTemplateProperty =
+            BindableProperty.Create("HeaderTemplate", typeof(DataTemplate), typeof(HorizontalScrollView), default(DataTemplate));
+
+        public DataTemplate HeaderTemplate
+        {
+            get { return (DataTemplate)GetValue(HeaderTemplateProperty); }
+            set { SetValue(HeaderTemplateProperty, value); }
+        }
+
         public event EventHandler<ItemTappedEventArgs> ItemSelected;
 
         public static readonly BindableProperty SelectedCommandProperty =
@@ -52,6 +61,12 @@ namespace SpotifyForms.Core.Views.Controls
 
             var layout = new StackLayout();
             layout.Orientation = Orientation == ScrollOrientation.Vertical ? StackOrientation.Vertical : StackOrientation.Horizontal;
+
+            if(HeaderTemplate != null)
+            {
+                var headerView = HeaderTemplate.CreateContent() as View;
+                layout.Children.Add(headerView);
+            }
 
             foreach (var item in ItemsSource)
             {

@@ -7,8 +7,19 @@
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls"
     BackgroundColor="Black">
     <ContentPage.Content>
-        <Grid Padding="12,0">
+        <Grid Padding="12">
             <controls:HorizontalScrollView ItemsSource="{Binding Playlists}" Orientation="Vertical">
+                <controls:HorizontalScrollView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="0,20" HorizontalOptions="Center">
+                            <Button
+                                BackgroundColor="White"
+                                Text="CREAR"
+                                TextColor="Black"
+                                WidthRequest="200" />
+                        </StackLayout>
+                    </DataTemplate>
+                </controls:HorizontalScrollView.HeaderTemplate>
                 <controls:HorizontalScrollView.ItemTemplate>
                     <DataTemplate>
                         <cells:PlaylistCell />

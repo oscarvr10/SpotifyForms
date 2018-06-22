@@ -17,6 +17,17 @@
                 </Setter>
             </Style>
 
+            <Style TargetType="Button">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>CircularSpotifyTxT-Bold</OnPlatform.iOS>
+                            <OnPlatform.Android>circular_bold.ttf#CircularSpotifyTxT-Bold</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
             <!--  Styles for common elements  -->
             <Style x:Key="BoldLabel" TargetType="Label">
                 <Setter Property="FontFamily">
