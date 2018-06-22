@@ -17,7 +17,7 @@ namespace SpotifyForms.Core.ViewModels
         public List<Song> Songs { get; set; }
         public List<Artist> Artists { get; set; }
         public List<Podcast> Podcasts { get; set; }
-
+        public List<SearchCategory> SearchCategories { get; set; }
         #endregion
 
         #region Commands
@@ -42,6 +42,7 @@ namespace SpotifyForms.Core.ViewModels
             Songs = MockDataService.GetSongs();
             Artists = MockDataService.GetArtists();
             Podcasts = MockDataService.GetPodcasts();
+            SearchCategories = MockDataService.GetSearchCategories();
         }
         
         

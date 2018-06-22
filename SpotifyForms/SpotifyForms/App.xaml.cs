@@ -1,3 +1,4 @@
+using DLToolkit.Forms.Controls;
 using SpotifyForms.Core.Services.Navigation;
 using SpotifyForms.Core.ViewModels.Base;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace SpotifyForms.Core
 		public App()
 		{
 			InitializeComponent();
+            FlowListView.Init();
             InitApp();
 		}
 

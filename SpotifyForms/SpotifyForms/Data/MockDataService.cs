@@ -1,5 +1,6 @@
 ﻿using SpotifyForms.Core.Models;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace SpotifyForms.Core.Data
 {
@@ -63,6 +64,29 @@ namespace SpotifyForms.Core.Data
                 new Podcast(){ Name="Make Me Smart", Author="Kai and Molly", ImageUrl="http://myspotifyideas.com/images/0185d72c914bbd6bc6cebdf38925bb4a72201b07-265.jpeg"},
                 new Podcast(){ Name="In Our Time", Author="BBC Radio", ImageUrl="http://myspotifyideas.com/images/3f8660b8172c3692f90af57846fcea239750d5f3-265.jpeg"},
                 new Podcast(){ Name="Every Little Thing", Author="Gimlet", ImageUrl="http://myspotifyideas.com/images/5fc8c46b290ab7272020843c3669d29175f0a7e4-265-1.jpeg"},
+            };
+        }
+
+        public static List<SearchCategory> GetSearchCategories()
+        {
+            return new List<SearchCategory>
+            {
+                new SearchCategory(){ Name="New Releases", StartColor = Color.DarkBlue, EndColor=Color.DarkRed },
+                new SearchCategory(){ Name="Charts", StartColor = Color.DarkBlue, EndColor=Color.DarkOliveGreen},
+                new SearchCategory(){ Name="Podcasts", StartColor = Color.LightPink, EndColor=Color.Orange},
+                new SearchCategory(){ Name="Latin", StartColor = Color.LightBlue, EndColor=Color.Blue},
+                new SearchCategory(){ Name="Pop", StartColor = Color.Purple, EndColor=Color.MediumVioletRed},
+                new SearchCategory(){ Name="Decades", StartColor = Color.Pink, EndColor=Color.HotPink},
+                new SearchCategory(){ Name="Sleep", StartColor = Color.MediumPurple, EndColor=Color.LightPink},
+                new SearchCategory(){ Name="Focus", StartColor = Color.Green, EndColor=Color.GreenYellow},
+                new SearchCategory(){ Name="Romance", StartColor = Color.Gray, EndColor=Color.DarkRed},
+                new SearchCategory(){ Name="Comedy", StartColor = Color.DarkBlue, EndColor=Color.LightGray},
+                new SearchCategory(){ Name="Dinner", StartColor = Color.DarkRed, EndColor=Color.DarkOrange},
+                new SearchCategory(){ Name="Sleep", StartColor = Color.YellowGreen, EndColor=Color.Yellow},
+                new SearchCategory(){ Name="Rock", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
+                new SearchCategory(){ Name="Indie", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
+                new SearchCategory(){ Name="Punk", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
+                new SearchCategory(){ Name="Electronic/Dance", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
             };
         }
     }

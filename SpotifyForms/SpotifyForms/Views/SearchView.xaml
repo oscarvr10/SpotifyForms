@@ -3,13 +3,35 @@
     x:Class="SpotifyForms.Core.Views.SearchView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cells="clr-namespace:SpotifyForms.Core.Views.Cells"
+    xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
     BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="20" Spacing="20">
             <Label
+                Margin="0,0,0,15"
+                FontSize="32"
                 HorizontalOptions="CenterAndExpand"
-                Text="Búsqueda"
-                VerticalOptions="CenterAndExpand" />
+                Style="{StaticResource BoldLabel}"
+                Text="Buscar"
+                TextColor="White" />
+            <SearchBar
+                Margin="10,0"
+                BackgroundColor="White"
+                FontSize="Medium"
+                Placeholder="Artistas, canciones o podcasts"
+                TextColor="Gray" />
+            <controls:FlowListView
+                FlowColumnCount="2"
+                FlowItemsSource="{Binding SearchCategories}"
+                HasUnevenRows="True"
+                RowHeight="120">
+                <controls:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <cells:SearchCategoryCell />
+                    </DataTemplate>
+                </controls:FlowListView.FlowColumnTemplate>
+            </controls:FlowListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

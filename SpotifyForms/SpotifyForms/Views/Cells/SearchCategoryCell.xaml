@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid
+    x:Class="SpotifyForms.Core.Views.Cells.SearchCategoryCell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls"
+    Padding="6">
+    <controls:GradientContentView
+        Margin="6"
+        Padding="12,6"
+        EndColor="{Binding EndColor}"
+        HeightRequest="100"
+        StartColor="{Binding StartColor}">
+        <Label
+            FontSize="Medium"
+            Style="{StaticResource BoldLabel}"
+            Text="{Binding Name}"
+            TextColor="White"
+            VerticalOptions="Start" />
+    </controls:GradientContentView>
+</Grid>
