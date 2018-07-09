@@ -2,6 +2,7 @@
 using SpotifyForms.Core.Models;
 using SpotifyForms.Core.ViewModels.Base;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -15,6 +16,7 @@ namespace SpotifyForms.Core.ViewModels
         public List<Album> Albums { get; set; }
         public List<Playlist> Playlists { get; set; }
         public List<Song> Songs { get; set; }
+        public Song SelectedSong { get; set; }
         public List<Artist> Artists { get; set; }
         public List<Podcast> Podcasts { get; set; }
         public List<SearchCategory> SearchCategories { get; set; }
@@ -22,8 +24,10 @@ namespace SpotifyForms.Core.ViewModels
 
         #region Commands
         public ICommand NavigateToAlbumDetailCommand { get; set; }
+        public ICommand OpenPlayerCommand { get; set; }
 
         #endregion
+
         public MainViewModel()
         {
             SetCommands();
@@ -33,6 +37,7 @@ namespace SpotifyForms.Core.ViewModels
         void SetCommands()
         {
             NavigateToAlbumDetailCommand = new Command(async() => await NavigateToAlbumDetail());
+            OpenPlayerCommand  = new Command(async (obj) => await NavigateToSong(obj));
         }
 
         void InitData()
@@ -45,7 +50,6 @@ namespace SpotifyForms.Core.ViewModels
             SearchCategories = MockDataService.GetSearchCategories();
         }
         
-        
         #region Base Methods
 
         public override Task InitializeAsync(object navigationData)
@@ -55,12 +59,16 @@ namespace SpotifyForms.Core.ViewModels
 
         #endregion
 
-
         #region Command Methods
 
         private async Task NavigateToAlbumDetail()
         {
             await NavigationService.NavigateToAsync<AlbumDetailViewModel>();
+        }
+
+        private async Task NavigateToSong(object obj)
+        {
+            await NavigationService.NavigateToAsync<PlayerViewModel>(obj);
         }
 
         #endregion
