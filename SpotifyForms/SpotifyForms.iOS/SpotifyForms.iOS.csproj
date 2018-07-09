@@ -91,14 +91,44 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\AudioSliderRenderer.cs" />
     <Compile Include="Renderers\GradientContentViewRenderer.cs" />
     <Compile Include="Renderers\HorizontalScrollViewRenderer.cs" />
+    <Compile Include="Renderers\ModalPageRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <BundleResource Include="Resources\Fonts\circular_bold.ttf" />
-    <BundleResource Include="Resources\Fonts\circular_book.ttf" />
-    <BundleResource Include="Resources\Fonts\circular_medium.ttf" />
+    <BundleResource Include="Resources\button_back%402x.png" />
+    <BundleResource Include="Resources\button_forward%402x.png" />
+    <BundleResource Include="Resources\button_pause%402x.png" />
+    <BundleResource Include="Resources\button_play%402x.png" />
+    <BundleResource Include="Resources\button_repeat%402x.png" />
+    <BundleResource Include="Resources\button_shuffle%402x.png" />
+    <BundleResource Include="Resources\icon_browse%402x.png" />
+    <BundleResource Include="Resources\icon_chevron_down%402x.png" />
+    <BundleResource Include="Resources\icon_chevron_up%402x.png" />
+    <BundleResource Include="Resources\icon_devices%402x.png" />
+    <BundleResource Include="Resources\icon_ellipsis%402x.png" />
+    <BundleResource Include="Resources\icon_library%402x.png" />
+    <BundleResource Include="Resources\icon_play_small%402x.png" />
+    <BundleResource Include="Resources\icon_playlist%402x.png" />
+    <BundleResource Include="Resources\icon_plus%402x.png" />
+    <BundleResource Include="Resources\icon_radio%402x.png" />
+    <BundleResource Include="Resources\icon_search%402x.png" />
+    <BundleResource Include="Resources\slider_max_track%402x.png" />
+    <BundleResource Include="Resources\small_slider%402x.png" />
+    <BundleResource Include="Resources\Fonts\circular-bold.ttf">
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\circular-book.ttf">
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\circular-medium.ttf">
+    </BundleResource>
+    <BundleResource Include="Resources\icon_shuffle%402x.png" />
+    <Compile Include="Renderers\TransparentNavBarPageRenderer.cs" />
+    <Compile Include="Renderers\ContentPageRenderer.cs" />
+    <Compile Include="Renderers\ColoredTabBarRenderer.cs" />
+    <BundleResource Include="Resources\icon_home%402x.png" />
+    <BundleResource Include="Resources\icon_settings%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -158,7 +188,9 @@
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
       <Version>3.0.0.5</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.550146" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.583944</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -168,4 +200,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
+  </ItemGroup>
 </Project>
