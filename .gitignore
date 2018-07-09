@@ -15,3 +15,6 @@
 .vs/VSWorkspaceState.json
 .vs/slnx.sqlite
 /.vs/SpotifyForms/DesignTimeBuild
+/.vs/SpotifyForms/xs/sqlite3
+/.vs/SpotifyForms/xs
+/SpotifyForms/SpotifyForms.iOS/bin/iPhoneSimulator/Debug
