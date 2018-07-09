@@ -1,4 +1,5 @@
-﻿using CoreAnimation;
+﻿using System.Drawing;
+using CoreAnimation;
 using CoreGraphics;
 using SpotifyForms.Core.Views.Controls;
 using SpotifyForms.iOS.Renderers;
@@ -40,7 +41,6 @@ namespace SpotifyForms.iOS.Renderers
                     GradientContentView.StartColor.ToCGColor(),
                     GradientContentView.EndColor.ToCGColor()
                 };
-
                 SetOrientation();
 
                 NativeView.Layer.InsertSublayer(GradientLayer, 0);
@@ -70,7 +70,7 @@ namespace SpotifyForms.iOS.Renderers
 
                 if (e.PropertyName == VisualElement.WidthProperty.PropertyName ||
                     e.PropertyName == VisualElement.HeightProperty.PropertyName)
-                    GradientLayer.Frame = NativeView.Bounds;
+                    GradientLayer.Frame = new RectangleF(0, 0, (float)GradientContentView.Width, (float)GradientContentView.Height);
 
                 if (e.PropertyName == GradientContentView.OrientationProperty.PropertyName)
                     SetOrientation();
