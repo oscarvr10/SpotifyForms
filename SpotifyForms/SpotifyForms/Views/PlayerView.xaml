@@ -44,12 +44,12 @@
                         </OnPlatform>
                     </StackLayout.IsVisible>
                     <Image
-                        HorizontalOptions="Start"
-                        HeightRequest="35"
-                        WidthRequest="35"
                         Aspect="AspectFill"
+                        HeightRequest="35"
+                        HorizontalOptions="Start"
                         Source="icon_chevron_down"
-                        VerticalOptions="Center">
+                        VerticalOptions="Center"
+                        WidthRequest="35">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding GoBackCommand}" />
                         </Image.GestureRecognizers>
@@ -70,25 +70,25 @@
                             TextColor="#FFF" />
                     </StackLayout>
                     <Image
-                        HorizontalOptions="End"
                         Aspect="AspectFill"
                         HeightRequest="35"
-                        WidthRequest="35"
+                        HorizontalOptions="End"
                         Source="icon_ellipsis"
-                        VerticalOptions="Center" />
+                        VerticalOptions="Center"
+                        WidthRequest="35" />
                 </StackLayout>
                 <Image Source="{Binding Song.AlbumImageUrl, Mode=OneWay}" VerticalOptions="Center">
                     <Image.HeightRequest>
                         <OnPlatform x:TypeArguments="x:Double">
                             <On Platform="Android" Value="340" />
-                            <On Platform="iOS" Value="320"/>
+                            <On Platform="iOS" Value="320" />
                         </OnPlatform>
                     </Image.HeightRequest>
                     <Image.WidthRequest>
                         <OnPlatform x:TypeArguments="x:Double">
                             <On Platform="Android" Value="330" />
-                            <On Platform="iOS" Value="290"/>
-                        </OnPlatform> 
+                            <On Platform="iOS" Value="290" />
+                        </OnPlatform>
                     </Image.WidthRequest>
                 </Image>
                 <Grid Margin="0,10">
@@ -112,9 +112,9 @@
                         <Label
                             Margin="0,-5,0,0"
                             FontSize="Medium"
-                            Style="{StaticResource BoldLabel}"
                             HorizontalOptions="FillAndExpand"
                             HorizontalTextAlignment="Center"
+                            Style="{StaticResource BoldLabel}"
                             Text="{Binding Song.Artist}"
                             TextColor="#adaeb2" />
                     </StackLayout>
@@ -158,16 +158,19 @@
                         Text="{Binding TicksLeft, Converter={StaticResource SecondsToTimeConverter}}"
                         TextColor="#adaeb2" />
                 </StackLayout>
-                <StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                     <StackLayout.Spacing>
                         <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android" Value="45" />
-                            <On Platform="iOS" Value="37"/>
+                            <On Platform="Android" Value="40" />
+                            <On Platform="iOS" Value="34" />
                         </OnPlatform>
                     </StackLayout.Spacing>
-                    <Image Source="button_shuffle" VerticalOptions="Center" />
+                    <Image Source="button_unfav" VerticalOptions="Center" />
                     <Image Source="button_back" VerticalOptions="Center" />
-                    <Image Source="button_play" VerticalOptions="Center" HeightRequest="70">
+                    <Image
+                        HeightRequest="70"
+                        Source="button_play"
+                        VerticalOptions="Center">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding PlayCommand}" />
                         </Image.GestureRecognizers>
@@ -187,7 +190,7 @@
                         </Image.Triggers>
                     </Image>
                     <Image Source="button_forward" VerticalOptions="Center" />
-                    <Image Source="button_repeat" VerticalOptions="Center" />
+                    <Image Source="button_nofav" VerticalOptions="Center" />
                 </StackLayout>
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                     <StackLayout.Margin>
