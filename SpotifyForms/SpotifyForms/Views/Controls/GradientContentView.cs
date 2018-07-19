@@ -62,12 +62,28 @@ namespace SpotifyForms.Core.Views.Controls
     public enum GradientOrientation
     {
         /// <summary>
-        /// The vertical
+        /// The vertical (Top to Bottom)
         /// </summary>
         Vertical,
         /// <summary>
-        /// The horizontal
+        /// The horizontal (Left to Right)
         /// </summary>
-        Horizontal
+        Horizontal,
+        /// <summary>
+        /// The Bottom right to Top left
+        /// </summary>
+        BrTl,
+        /// <summary>
+        /// The Bottom left to Top right
+        /// </summary>
+        BlTr,
+        /// <summary>
+        /// The Top left to Bottom right
+        /// </summary>
+        TlBr,
+        /// <summary>
+        /// The Top right to Bottom left
+        /// </summary>
+        TrBl
     }
 }

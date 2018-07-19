@@ -100,8 +100,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\button_back%402x.png" />
     <BundleResource Include="Resources\button_forward%402x.png" />
-    <BundleResource Include="Resources\button_pause%402x.png" />
-    <BundleResource Include="Resources\button_play%402x.png" />
+    <BundleResource Include="Resources\button_pause2%402x.png" />
+    <BundleResource Include="Resources\button_play2%402x.png" />
     <BundleResource Include="Resources\button_repeat%402x.png" />
     <BundleResource Include="Resources\button_shuffle%402x.png" />
     <BundleResource Include="Resources\icon_browse%402x.png" />
@@ -129,6 +129,10 @@
     <Compile Include="Renderers\ColoredTabBarRenderer.cs" />
     <BundleResource Include="Resources\icon_home%402x.png" />
     <BundleResource Include="Resources\icon_settings%402x.png" />
+    <BundleResource Include="Resources\button_nofav%402x.png" />
+    <BundleResource Include="Resources\button_unfav%402x.png" />
+    <BundleResource Include="Resources\button_pause%402x.png" />
+    <BundleResource Include="Resources\button_play%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

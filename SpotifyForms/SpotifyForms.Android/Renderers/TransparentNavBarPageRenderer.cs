@@ -31,12 +31,10 @@ namespace SpotifyForms.Droid.Renderers
             var memberInfo = typeof(TransparentNavBarPageRenderer).BaseType;
             if (memberInfo != null)
             {
-
                 var field = memberInfo.GetField(nameof(_toolbar), BindingFlags.Instance | BindingFlags.NonPublic);
                 _toolbar = field.GetValue(this) as Toolbar;
                 _toolbar.SetBackgroundColor(Color.Transparent.ToAndroid());
-
-
+                
                 Activity context = Context as Activity;
 
                 var window = context.Window;
@@ -44,7 +42,6 @@ namespace SpotifyForms.Droid.Renderers
                 context.Window.ClearFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             }
         }
-
 
         protected override void OnLayout(bool changed, int l, int t, int r, int b)
         {

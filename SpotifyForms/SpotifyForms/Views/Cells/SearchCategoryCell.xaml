@@ -7,9 +7,9 @@
     Padding="8">
     <controls:GradientContentView
         Padding="12"
-        Orientation="Vertical"
         EndColor="{Binding EndColor}"
         HeightRequest="70"
+        Orientation="TlBr"
         StartColor="{Binding StartColor}">
         <Label
             FontSize="Medium"

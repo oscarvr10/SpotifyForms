@@ -11,7 +11,6 @@ namespace SpotifyForms.Droid.Renderers
 {
     public class GradientContentViewRenderer : ViewRenderer<GradientContentView, Android.Views.View>
     {
-
         public GradientContentViewRenderer(Context context): base(context)
         {
 
@@ -67,8 +66,30 @@ namespace SpotifyForms.Droid.Renderers
         protected override bool DrawChild(Canvas canvas, global::Android.Views.View child, long drawingTime)
         {
             GradientDrawable.Bounds = canvas.ClipBounds;
-            GradientDrawable.SetOrientation(GradientContentView.Orientation == GradientOrientation.Vertical ? GradientDrawable.Orientation.TopBottom
-                : GradientDrawable.Orientation.LeftRight);
+            switch (GradientContentView.Orientation)
+            {
+                case GradientOrientation.Vertical:
+                    GradientDrawable.SetOrientation(GradientDrawable.Orientation.TopBottom);
+                    break;
+                case GradientOrientation.Horizontal:
+                    GradientDrawable.SetOrientation(GradientDrawable.Orientation.LeftRight);
+                    break;
+                case GradientOrientation.BrTl:
+                    GradientDrawable.SetOrientation(GradientDrawable.Orientation.BrTl);
+                    break;
+                case GradientOrientation.BlTr:
+                    GradientDrawable.SetOrientation(GradientDrawable.Orientation.BlTr);
+                    break;
+                case GradientOrientation.TlBr:
+                    GradientDrawable.SetOrientation(GradientDrawable.Orientation.TlBr);
+                    break;
+                case GradientOrientation.TrBl:
+                    GradientDrawable.SetOrientation(GradientDrawable.Orientation.TrBl);
+                    break;
+                default:
+                    break;
+            }
+            
             GradientDrawable.Draw(canvas);
             return base.DrawChild(canvas, child, drawingTime);
         }

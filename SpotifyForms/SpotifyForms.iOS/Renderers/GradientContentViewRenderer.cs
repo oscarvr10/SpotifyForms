@@ -85,10 +85,30 @@ namespace SpotifyForms.iOS.Renderers
                 GradientLayer.StartPoint = new CGPoint(0, 0.5);
                 GradientLayer.EndPoint = new CGPoint(1, 0.5);
             }
-            else
+            else if (GradientContentView.Orientation == GradientOrientation.Vertical)
             {
                 GradientLayer.StartPoint = new CGPoint(0.5, 0);
                 GradientLayer.EndPoint = new CGPoint(0.5, 1);
+            }
+            else if (GradientContentView.Orientation == GradientOrientation.TlBr)
+            {
+                GradientLayer.StartPoint = new CGPoint(0, 0);
+                GradientLayer.EndPoint = new CGPoint(0.5, 1);
+            }
+            else if (GradientContentView.Orientation == GradientOrientation.TrBl)
+            {
+                GradientLayer.StartPoint = new CGPoint(1, 0);
+                GradientLayer.EndPoint = new CGPoint(0, 1);
+            }
+            else if (GradientContentView.Orientation == GradientOrientation.BlTr)
+            {
+                GradientLayer.StartPoint = new CGPoint(0, 1);
+                GradientLayer.EndPoint = new CGPoint(1, 0);
+            }
+            else if (GradientContentView.Orientation == GradientOrientation.BrTl)
+            {
+                GradientLayer.StartPoint = new CGPoint(1, 1);
+                GradientLayer.EndPoint = new CGPoint(0, 0);
             }
         }
 
