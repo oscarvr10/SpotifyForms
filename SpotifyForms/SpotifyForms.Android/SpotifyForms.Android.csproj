@@ -68,6 +68,7 @@
     <Compile Include="Renderers\AudioSliderRenderer.cs" />
     <Compile Include="Renderers\BlurredImageRenderer.cs" />
     <Compile Include="Renderers\GradientContentViewRenderer.cs" />
+    <Compile Include="Renderers\GradientTabbedPageRenderer.cs" />
     <Compile Include="Renderers\HorizontalScrollViewRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +81,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\font\circular_bold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -104,7 +106,9 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon_library2.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon_settings.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\color\icon_tab.xml" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpotifyForms\SpotifyForms.Core.csproj">
       <Project>{86168975-3D6D-4AE7-86E4-037E18B853FF}</Project>
@@ -177,5 +181,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\small_slider.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

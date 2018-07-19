@@ -2,4 +2,7 @@
 <resources>
 	<color name="bb_darkBackgroundColor">#222327</color>
   <color name="launcher_background">#FFFFFF</color>
+  <color name="green_color">#10d150</color>
+  <color name="white_color">#FFFFFF</color>
+  <color name="gray_color">#686868</color>
 </resources>
