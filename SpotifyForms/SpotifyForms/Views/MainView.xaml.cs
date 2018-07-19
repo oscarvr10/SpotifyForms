@@ -16,7 +16,7 @@ namespace SpotifyForms.Core.Views
             // Hide the navbar on Android
             if (Device.RuntimePlatform == Device.Android)
             {
-                //Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
+                //NavigationPage.SetHasNavigationBar(this, false);
                 BarTextColor = Color.FromHex("#adaeb2");
             }
 

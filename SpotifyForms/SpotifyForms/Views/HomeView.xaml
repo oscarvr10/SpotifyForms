@@ -6,10 +6,14 @@
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls;assembly=SpotifyForms.Core"
     BackgroundColor="Black">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Priority="2" Icon="icon_settings" />
+        <ToolbarItem Icon="icon_settings" Priority="2" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ScrollView x:Name="mainScrollView" Scrolled="Handle_Scrolled" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ScrollView
+            x:Name="mainScrollView"
+            HorizontalOptions="FillAndExpand"
+            Scrolled="Handle_Scrolled"
+            VerticalOptions="FillAndExpand">
             <Grid x:Name="mainGrid">
                 <StackLayout x:Name="gradientView" HeightRequest="220">
                     <StackLayout.Margin>
@@ -20,9 +24,9 @@
                     </StackLayout.Margin>
                     <controls:GradientContentView
                         Padding="12"
-                        Orientation="Vertical"
                         EndColor="#38383a"
                         HeightRequest="220"
+                        Orientation="Vertical"
                         StartColor="#3813dd">
                         <Label>
                             <Label.IsVisible>
@@ -58,8 +62,8 @@
                     <controls:HorizontalScrollView
                         Grid.Row="1"
                         ItemsSource="{Binding Songs}"
-                        SelectedCommand="{Binding OpenPlayerCommand}"
-                        Orientation="Horizontal">
+                        Orientation="Horizontal"
+                        SelectedCommand="{Binding OpenPlayerCommand}">
                         <controls:HorizontalScrollView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -75,8 +79,8 @@
                                                 <RowDefinition />
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
                                             </Grid.ColumnDefinitions>
                                             <ContentView
                                                 Margin="0,2,0,0"
@@ -87,15 +91,15 @@
                                                 <Image Source="icon_shuffle.png" />
                                             </ContentView>
                                             <Label
-                                                Grid.Column="1"
                                                 Grid.RowSpan="2"
+                                                Grid.Column="1"
                                                 FontSize="14"
-                                                VerticalOptions="Start"
                                                 HorizontalOptions="Center"
                                                 LineBreakMode=" WordWrap"
                                                 Style="{StaticResource BoldLabel}"
                                                 Text="{Binding Artist}"
-                                                TextColor="White" />
+                                                TextColor="White"
+                                                VerticalOptions="Start" />
                                         </Grid>
                                     </StackLayout>
                                 </ViewCell>
@@ -119,16 +123,16 @@
                                     <StackLayout Padding="0,12" Spacing="6">
                                         <Image
                                             Grid.Column="1"
-                                            HeightRequest="250"
                                             Aspect="AspectFit"
+                                            HeightRequest="250"
                                             Source="{Binding ImageUrl}"
-                                            VerticalOptions="FillAndExpand"/>
+                                            VerticalOptions="FillAndExpand" />
                                         <StackLayout Grid.Row="1">
                                             <Label
+                                                Margin="0,0,0,-5"
                                                 FontSize="Medium"
                                                 HorizontalTextAlignment="Center"
                                                 LineBreakMode="TailTruncation"
-                                                Margin="0,0,0,-5"
                                                 Style="{StaticResource BoldLabel}"
                                                 Text="{Binding Artist}"
                                                 TextColor="White" />

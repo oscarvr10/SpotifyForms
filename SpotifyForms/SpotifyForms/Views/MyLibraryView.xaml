@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage
+<controls:GradientTabbedPage
     x:Class="SpotifyForms.Core.Views.MyLibraryView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:SpotifyForms.Core.Views">
+    xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls"
+    xmlns:views="clr-namespace:SpotifyForms.Core.Views"
+    EndColor="#38383a"
+    Orientation="TlBr"
+    StartColor="#221851">
     <views:PlaylistsView Title="Playlists" />
     <views:ArtistsView Title="Artists" />
     <views:AlbumsView Title="Albums" />
     <views:PodcastsView Title="Podcasts" />
-</TabbedPage>
+</controls:GradientTabbedPage>
