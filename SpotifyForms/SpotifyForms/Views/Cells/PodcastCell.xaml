@@ -5,26 +5,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout
         Padding="6"
-        HeightRequest="130"
+        HeightRequest="100"
         Orientation="Horizontal">
         <Image
-            HeightRequest="120"
+            HeightRequest="90"
             HorizontalOptions="Start"
             Source="{Binding ImageUrl}"
-            WidthRequest="120" />
+            WidthRequest="90" />
         <StackLayout Orientation="Vertical" VerticalOptions="Center">
             <Label
                 Margin="10,0"
-                FontSize="Medium"
+                FontSize="19"
                 LineBreakMode="TailTruncation"
-                Style="{StaticResource BoldLabel}"
                 Text="{Binding Name}"
                 TextColor="White" />
             <Label
-                Margin="10,0"
-                FontSize="Small"
+                Margin="10,-5"
+                FontSize="15"
                 LineBreakMode="TailTruncation"
-                Style="{StaticResource BoldLabel}"
                 Text="{Binding Author}"
                 TextColor="#adaeb2" />
         </StackLayout>
