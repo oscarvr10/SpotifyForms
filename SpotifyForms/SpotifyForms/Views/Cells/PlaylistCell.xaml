@@ -5,32 +5,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout
         Padding="6"
-        HeightRequest="130"
+        HeightRequest="100"
         Orientation="Horizontal">
         <Image
-            HeightRequest="120"
+            HeightRequest="90"
             HorizontalOptions="Start"
             Source="{Binding ImageUrl}"
-            WidthRequest="120" />
+            WidthRequest="90" />
         <StackLayout Orientation="Vertical" VerticalOptions="Center">
             <Label
                 Margin="10,0"
-                FontSize="Medium"
+                FontSize="19"
                 LineBreakMode="TailTruncation"
-                Style="{StaticResource BoldLabel}"
                 Text="{Binding Name}"
                 TextColor="White" />
-            <StackLayout Margin="10,0" Orientation="Horizontal">
+            <StackLayout Margin="10,-5,0,0" Orientation="Horizontal">
                 <ContentView
-                    Padding="6,2"
+                    Padding="4,0"
                     BackgroundColor="#2779dd"
-                    WidthRequest="18">
+                    WidthRequest="13">
                     <Image Source="icon_shuffle.png" />
                 </ContentView>
                 <Label
-                    FontSize="Small"
+                    FontSize="15"
                     LineBreakMode="TailTruncation"
-                    Style="{StaticResource BoldLabel}"
                     Text="{Binding Editor, StringFormat='de {0}'}"
                     TextColor="#adaeb2" />
             </StackLayout>

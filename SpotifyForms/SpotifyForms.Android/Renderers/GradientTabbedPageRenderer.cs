@@ -33,7 +33,7 @@ namespace SpotifyForms.Droid.Renderers
             var control = (GradientTabbedPage)this.Element;
             var context = (MainActivity)this.Context;
 
-            var tabs = this.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
+            var tablayout = this.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
             var gradient = new GradientDrawable();
             gradient.SetGradientType(GradientType.LinearGradient);
             
@@ -68,13 +68,15 @@ namespace SpotifyForms.Droid.Renderers
                 gradient.SetColors(new int[] { control.StartColor.ToAndroid(), control.EndColor.ToAndroid() });
             }
 
-            //Set gradient to tabs
-            tabs.SetBackground(gradient);
+            //Set gradient to Tablayout
+            tablayout.SetBackground(gradient);
             var window = context.Window;
+            window.AddFlags(WindowManagerFlags.TranslucentStatus);
             window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
             context.Window.ClearFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
 
-            tabs.SetPadding(0, (GetStatusBarHeight() * 2), 0, 6);
+            tablayout.SetPadding(0, (GetStatusBarHeight() * 2), 0, 0);
+            tablayout.Elevation = 8f;
         }
         
         public int GetStatusBarHeight()

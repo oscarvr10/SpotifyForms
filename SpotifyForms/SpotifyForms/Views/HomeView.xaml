@@ -39,7 +39,7 @@
                     </controls:GradientContentView>
                 </StackLayout>
 
-                <Grid RowSpacing="8">
+                <Grid RowSpacing="10">
                     <Grid.Margin>
                         <OnPlatform x:TypeArguments="Thickness">
                             <On Platform="iOS" Value="0,50,0,0" />
@@ -67,7 +67,7 @@
                         <controls:HorizontalScrollView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <StackLayout Margin="5,0" WidthRequest="165">
+                                    <StackLayout WidthRequest="165">
                                         <Image
                                             HeightRequest="152"
                                             HorizontalOptions="Start"
