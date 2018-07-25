@@ -5,8 +5,8 @@ namespace SpotifyForms.Core.Views.Controls
     public class GradientTabbedPage : TabbedPage
     {
         /// <summary>
-        /// Start color of the gradient
-        /// Defaults to White
+        /// Orientation of the gradient.
+        /// Defaults to Vertical
         /// </summary>
         public GradientOrientation Orientation
         {
@@ -15,13 +15,14 @@ namespace SpotifyForms.Core.Views.Controls
         }
 
         /// <summary>
-        /// The orientation property
+        /// Orientation of the gradient
+        /// Defaults to Vertical
         /// </summary>
         public static readonly BindableProperty OrientationProperty =
-            BindableProperty.Create("Orientation", typeof(GradientOrientation), typeof(GradientContentView), GradientOrientation.Vertical);
+            BindableProperty.Create("Orientation", typeof(GradientOrientation), typeof(GradientTabbedPage), GradientOrientation.Vertical);
 
         /// <summary>
-        /// Start color of the gradient
+        /// Start color of the gradient.
         /// Defaults to White
         /// </summary>
         public Color StartColor
@@ -34,10 +35,10 @@ namespace SpotifyForms.Core.Views.Controls
         /// Using a BindableProperty as the backing store for StartColor.  This enables animation, styling, binding, etc...
         /// </summary>
         public static readonly BindableProperty StartColorProperty =
-            BindableProperty.Create("StartColor", typeof(Color), typeof(GradientContentView), Color.White);
+            BindableProperty.Create("StartColor", typeof(Color), typeof(GradientTabbedPage), Color.White);
 
         /// <summary>
-        /// End color of the gradient
+        /// End color of the gradient.
         /// Defaults to Black
         /// </summary>
         public Color EndColor
@@ -50,7 +51,26 @@ namespace SpotifyForms.Core.Views.Controls
         /// Using a BindableProperty as the backing store for EndColor.  This enables animation, styling, binding, etc...
         /// </summary>
         public static readonly BindableProperty EndColorProperty =
-            BindableProperty.Create("EndColor", typeof(Color), typeof(GradientContentView), Color.White);
+            BindableProperty.Create("EndColor", typeof(Color), typeof(GradientTabbedPage), Color.White);
+
+
+        /// <summary>
+        /// Indicator color for the selected tab.
+        /// Defaults to White
+        /// </summary>
+        public Color BarIndicatorColor
+        {
+            get { return (Color)GetValue(BarIndicatorColorProperty); }
+            set { SetValue(BarIndicatorColorProperty, value); }
+        }
+
+        /// <summary>
+        /// Using a BindableProperty as the backing store for TabColorIndicator.  This enables animation, styling, binding, etc...
+        /// </summary>
+        public static readonly BindableProperty BarIndicatorColorProperty =
+            BindableProperty.Create("BarIndicatorColor", typeof(Color), typeof(GradientTabbedPage), Color.White);
+
+
     }
 }
 

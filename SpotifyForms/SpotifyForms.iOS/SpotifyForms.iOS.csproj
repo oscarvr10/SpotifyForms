@@ -133,6 +133,7 @@
     <BundleResource Include="Resources\button_unfav%402x.png" />
     <BundleResource Include="Resources\button_pause%402x.png" />
     <BundleResource Include="Resources\button_play%402x.png" />
+    <Compile Include="Renderers\GradientTabbedPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
