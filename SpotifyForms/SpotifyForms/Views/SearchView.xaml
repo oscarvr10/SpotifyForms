@@ -4,36 +4,87 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cells="clr-namespace:SpotifyForms.Core.Views.Cells"
-    xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls;assembly=SpotifyForms.Core"
     Title="Search"
-    BackgroundColor="Black">
+    BackgroundColor="#111111">
     <ContentPage.Content>
-        <StackLayout Padding="12" Spacing="20">
-            <Label
-                Margin="0,0,0,15"
-                FontSize="48"
-                HorizontalOptions="CenterAndExpand"
-                Style="{StaticResource BoldLabel}"
-                Text="Buscar"
-                TextColor="White" />
-            <SearchBar
-                Margin="8,0"
-                BackgroundColor="White"
-                FontSize="Medium"
-                Placeholder="Artistas, canciones o podcasts"
-                TextColor="Gray" />
-            <controls:FlowListView
-                FlowColumnCount="2"
-                FlowItemsSource="{Binding SearchCategories}"
-                HasUnevenRows="True"
-                BackgroundColor="Black"
-                RowHeight="120">
-                <controls:FlowListView.FlowColumnTemplate>
-                    <DataTemplate>
-                        <cells:SearchCategoryCell />
-                    </DataTemplate>
-                </controls:FlowListView.FlowColumnTemplate>
-            </controls:FlowListView>
-        </StackLayout>
+        <ScrollView
+            x:Name="mainScrollView"
+            HorizontalOptions="FillAndExpand"
+            Scrolled="Handle_Scrolled"
+            VerticalOptions="FillAndExpand">
+            <Grid x:Name="mainGrid">
+                <StackLayout x:Name="gradientView" HeightRequest="220">
+                    <StackLayout.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,-90,0,0" />
+                            <On Platform="Android" Value="0,0,0,0" />
+                        </OnPlatform>
+                    </StackLayout.Margin>
+                    <controls:GradientContentView
+                        Padding="12"
+                        HeightRequest="220"
+                        Orientation="Vertical">
+                        <controls:GradientContentView.StartColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS" Value="#3809e5" />
+                                <On Platform="Android" Value="#3a3a3a" />
+                            </OnPlatform>
+                        </controls:GradientContentView.StartColor>
+                        <controls:GradientContentView.EndColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS" Value="#38383a" />
+                                <On Platform="Android" Value="#000000" />
+                            </OnPlatform>
+                        </controls:GradientContentView.EndColor>
+                        <Label>
+                            <Label.IsVisible>
+                                <OnPlatform x:TypeArguments="x:Boolean">
+                                    <On Platform="iOS" Value="false" />
+                                    <On Platform="Android" Value="true" />
+                                </OnPlatform>
+                            </Label.IsVisible>
+                        </Label>
+                    </controls:GradientContentView>
+                </StackLayout>
+                <StackLayout Padding="12,0" Spacing="20"
+                             x:Name="stkContainer">
+                    <StackLayout.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,50,0,0" />
+                            <On Platform="Android" Value="0,120,0,0" />
+                        </OnPlatform>
+                    </StackLayout.Margin>
+                    <Label
+                        Margin="0,0,0,5"
+                        FontSize="48"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource BoldLabel}"
+                        Text="Search"
+                        TextColor="White" />
+                    <SearchBar
+                        Margin="8,0"
+                        BackgroundColor="White"
+                        FontSize="Medium"
+                        HeightRequest="60"
+                        Placeholder="Artistas, canciones o podcasts"
+                        TextColor="Gray" />
+                    <flv:FlowListView
+                        x:Name="flvCategories"
+                        FlowColumnCount="2"
+                        FlowItemsSource="{Binding SearchCategories}"
+                        HasUnevenRows="True"
+                        BackgroundColor="Black"
+                        RowHeight="120">
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <cells:SearchCategoryCell />
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
