@@ -13,9 +13,12 @@ namespace SpotifyForms.iOS.Renderers
         {
             base.OnElementChanged(e);
 
+            if (TabBar == null)
+                return;
             // Set our basic tab bar colors.
-            //UITabBar.Appearance.BarTintColor = Color.FromHex("#1e1e1e").ToUIColor();
-            UITabBar.Appearance.TintColor = Color.FromHex("#ffffff").ToUIColor();
+
+            TabBar.BarTintColor = Color.FromHex("#2d2d2d").ToUIColor();
+            TabBar.TintColor = Color.FromHex("#ffffff").ToUIColor();
         }
 
         public override void ViewWillAppear(bool animated)
@@ -34,7 +37,7 @@ namespace SpotifyForms.iOS.Renderers
             base.ViewWillAppear(animated);
         }
 
-        private void UpdateTabBarItem(UITabBarItem item, string icon)
+        void UpdateTabBarItem(UITabBarItem item, string icon)
         {
             if (item == null || icon == null)
                 return;

@@ -1,22 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="SpotifyForms.Core.Views.PlaylistsView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cells="clr-namespace:SpotifyForms.Core.Views.Cells"
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls"
-    BackgroundColor="Black">
+    BackgroundColor="#111111">
     <ContentPage.Content>
         <Grid Padding="12,0">
             <controls:HorizontalScrollView ItemsSource="{Binding Playlists}" Orientation="Vertical">
                 <controls:HorizontalScrollView.HeaderTemplate>
                     <DataTemplate>
-                        <StackLayout Margin="0,50,0,20" HorizontalOptions="Center">
+                        <StackLayout Margin="0,27,0,20" HorizontalOptions="Center">
                             <Button
                                 BackgroundColor="White"
-                                Text="CREAR"
+                                Text="CREATE"
+                                BorderRadius="27"
+                                BorderColor="White"
                                 TextColor="Black"
-                                WidthRequest="140" />
+                                WidthRequest="158"
+                                HeightRequest="52"/>
                         </StackLayout>
                     </DataTemplate>
                 </controls:HorizontalScrollView.HeaderTemplate>

@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls;assembly=SpotifyForms.Core"
-    BackgroundColor="Black">
+    BackgroundColor="#111111">
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="icon_settings" Priority="2" />
     </ContentPage.ToolbarItems>
@@ -24,10 +24,20 @@
                     </StackLayout.Margin>
                     <controls:GradientContentView
                         Padding="12"
-                        EndColor="#38383a"
                         HeightRequest="220"
-                        Orientation="Vertical"
-                        StartColor="#3813dd">
+                        Orientation="Vertical">
+                        <controls:GradientContentView.StartColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS" Value="#3809e5" />
+                                <On Platform="Android" Value="#3a3a3a" />
+                            </OnPlatform>
+                        </controls:GradientContentView.StartColor>
+                        <controls:GradientContentView.EndColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS" Value="#38383a" />
+                                <On Platform="Android" Value="#000000" />
+                            </OnPlatform>
+                        </controls:GradientContentView.EndColor>
                         <Label>
                             <Label.IsVisible>
                                 <OnPlatform x:TypeArguments="x:Boolean">

@@ -1,24 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ViewCell
     x:Class="SpotifyForms.Core.Views.Cells.PlaylistCell"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout
         Padding="6"
-        HeightRequest="100"
+        HeightRequest="95"
         Orientation="Horizontal">
         <Image
-            HeightRequest="90"
+            HeightRequest="85"
             HorizontalOptions="Start"
             Source="{Binding ImageUrl}"
-            WidthRequest="90" />
+            WidthRequest="85" />
         <StackLayout Orientation="Vertical" VerticalOptions="Center">
             <Label
                 Margin="10,0"
-                FontSize="19"
                 LineBreakMode="TailTruncation"
                 Text="{Binding Name}"
-                TextColor="White" />
+                TextColor="White">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android" Value="18" />
+                        <On Platform="iOS" Value="17" />
+                    </OnPlatform>
+                </Label.FontSize>
+            </Label>
             <StackLayout Margin="10,-5,0,0" Orientation="Horizontal">
                 <ContentView
                     Padding="4,0"
@@ -27,10 +33,16 @@
                     <Image Source="icon_shuffle.png" />
                 </ContentView>
                 <Label
-                    FontSize="15"
                     LineBreakMode="TailTruncation"
                     Text="{Binding Editor, StringFormat='de {0}'}"
-                    TextColor="#adaeb2" />
+                    TextColor="#adaeb2">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="14" />
+                            <On Platform="iOS" Value="13" />
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
             </StackLayout>
         </StackLayout>
     </StackLayout>

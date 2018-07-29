@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls"
     xmlns:views="clr-namespace:SpotifyForms.Core.Views"
-    StartColor="#2e1c8c"
+    StartColor="#1c114c"
     EndColor="#2a2a2d"
     Orientation="TlBr"
-    BarIndicatorColor="#10d150">
+    BarIndicatorColor="#55cc61">
     <views:PlaylistsView Title="Playlists" />
     <views:ArtistsView Title="Artists" />
     <views:AlbumsView Title="Albums" />

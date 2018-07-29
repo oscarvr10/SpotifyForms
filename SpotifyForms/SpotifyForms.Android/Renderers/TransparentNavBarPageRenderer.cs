@@ -8,8 +8,9 @@ using Xamarin.Forms.Platform.Android.AppCompat;
 using Android.App;
 using Android.Views;
 using System.Reflection;
+using SpotifyForms.Core.Views;
 
-[assembly: ExportRenderer(typeof(NavigationPage), typeof(TransparentNavBarPageRenderer))]
+[assembly: ExportRenderer(typeof(CustomNavigationView), typeof(TransparentNavBarPageRenderer))]
 namespace SpotifyForms.Droid.Renderers
 {
     public class TransparentNavBarPageRenderer : NavigationPageRenderer
