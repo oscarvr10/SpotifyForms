@@ -4,9 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cells="clr-namespace:SpotifyForms.Core.Views.Cells"
-    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls;assembly=SpotifyForms.Core"
-    Title="Search"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
     BackgroundColor="#111111">
     <ContentPage.Content>
         <ScrollView
@@ -48,8 +47,10 @@
                         </Label>
                     </controls:GradientContentView>
                 </StackLayout>
-                <StackLayout Padding="12,0" Spacing="20"
-                             x:Name="stkContainer">
+                <StackLayout
+                    x:Name="stkContainer"
+                    Padding="12,0"
+                    Spacing="20">
                     <StackLayout.Margin>
                         <OnPlatform x:TypeArguments="Thickness">
                             <On Platform="iOS" Value="0,50,0,0" />
@@ -68,14 +69,14 @@
                         BackgroundColor="White"
                         FontSize="Medium"
                         HeightRequest="60"
-                        Placeholder="Artistas, canciones o podcasts"
+                        Placeholder="Artists, songs or podcasts"
                         TextColor="Gray" />
                     <flv:FlowListView
                         x:Name="flvCategories"
+                        BackgroundColor="Black"
                         FlowColumnCount="2"
                         FlowItemsSource="{Binding SearchCategories}"
                         HasUnevenRows="True"
-                        BackgroundColor="Black"
                         RowHeight="120">
                         <flv:FlowListView.FlowColumnTemplate>
                             <DataTemplate>

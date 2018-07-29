@@ -17,7 +17,7 @@
     <Compile Update="Views\AlbumDetailView.xaml.cs">
       <DependentUpon>AlbumDetailView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\CustomNavigationView.xaml.cs">
+    <Compile Update="Views\Controls\CustomNavigationView.xaml.cs">
       <DependentUpon>CustomNavigationView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\PlaylistsView.xaml.cs">
@@ -50,7 +50,7 @@
     <EmbeddedResource Update="Views\Cells\SearchCategoryCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CustomNavigationView.xaml">
+    <EmbeddedResource Update="Views\Controls\CustomNavigationView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HomeView.xaml">
@@ -72,9 +72,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SearchView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SettingsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

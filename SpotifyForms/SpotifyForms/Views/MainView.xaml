@@ -6,9 +6,9 @@
     xmlns:controls="clr-namespace:SpotifyForms.Core.Views.Controls;assembly=SpotifyForms.Core;"
     xmlns:viewModelBase="clr-namespace:SpotifyForms.Core.ViewModels.Base;assembly=SpotifyForms.Core"
     xmlns:views="clr-namespace:SpotifyForms.Core.Views"
-    BarBackgroundColor="#1e1e1e"
-    viewModelBase:ViewModelLocator.AutoWireViewModel="True">
-    <views:HomeView Title="Inicio" Icon="icon_home"  />
-    <views:SearchView Title="Buscar" Icon="icon_search"  />
-    <views:MyLibraryView Title="Mi Biblioteca" Icon="icon_library" />
+    viewModelBase:ViewModelLocator.AutoWireViewModel="True"
+    BarBackgroundColor="#1e1e1e">
+    <views:HomeView Title="Home" Icon="icon_home" />
+    <views:SearchView Title="Search" Icon="icon_search" />
+    <views:MyLibraryView Title="Library" Icon="icon_library" />
 </controls:BottomTabbedPage>

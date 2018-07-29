@@ -67,7 +67,7 @@
                         FontSize="19"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource BoldLabel}"
-                        Text="Escuchadas recientemente"
+                        Text="Recently played"
                         TextColor="White" />
                     <controls:HorizontalScrollView
                         Grid.Row="1"
@@ -121,7 +121,7 @@
                         FontSize="19"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource BoldLabel}"
-                        Text="Creados para ti"
+                        Text="Made for you"
                         TextColor="White" />
                     <controls:HorizontalScrollView
                         Grid.Row="4"

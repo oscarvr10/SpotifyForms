@@ -14,12 +14,12 @@
                         <StackLayout Margin="0,27,0,20" HorizontalOptions="Center">
                             <Button
                                 BackgroundColor="White"
-                                Text="CREATE"
-                                BorderRadius="27"
                                 BorderColor="White"
+                                BorderRadius="27"
+                                HeightRequest="52"
+                                Text="CREATE"
                                 TextColor="Black"
-                                WidthRequest="158"
-                                HeightRequest="52"/>
+                                WidthRequest="158" />
                         </StackLayout>
                     </DataTemplate>
                 </controls:HorizontalScrollView.HeaderTemplate>

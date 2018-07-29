@@ -34,7 +34,7 @@
                 </ContentView>
                 <Label
                     LineBreakMode="TailTruncation"
-                    Text="{Binding Editor, StringFormat='de {0}'}"
+                    Text="{Binding Editor, StringFormat='by {0}'}"
                     TextColor="#adaeb2">
                     <Label.FontSize>
                         <OnPlatform x:TypeArguments="x:Double">
