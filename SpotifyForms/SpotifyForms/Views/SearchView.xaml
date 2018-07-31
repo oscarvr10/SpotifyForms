@@ -8,45 +8,45 @@
     xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
     BackgroundColor="#111111">
     <ContentPage.Content>
-        <ScrollView
-            x:Name="mainScrollView"
-            HorizontalOptions="FillAndExpand"
-            Scrolled="Handle_Scrolled"
-            VerticalOptions="FillAndExpand">
-            <Grid x:Name="mainGrid">
-                <StackLayout x:Name="gradientView" HeightRequest="220">
-                    <StackLayout.Margin>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="iOS" Value="0,-90,0,0" />
-                            <On Platform="Android" Value="0,0,0,0" />
+        <Grid x:Name="gridContainer">
+            <StackLayout x:Name="gradientView" HeightRequest="220">
+                <StackLayout.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0,-90,0,0" />
+                        <On Platform="Android" Value="0,0,0,0" />
+                    </OnPlatform>
+                </StackLayout.Margin>
+                <controls:GradientContentView
+                    Padding="12"
+                    HeightRequest="220"
+                    Orientation="Vertical">
+                    <controls:GradientContentView.StartColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="#3809e5" />
+                            <On Platform="Android" Value="#3a3a3a" />
                         </OnPlatform>
-                    </StackLayout.Margin>
-                    <controls:GradientContentView
-                        Padding="12"
-                        HeightRequest="220"
-                        Orientation="Vertical">
-                        <controls:GradientContentView.StartColor>
-                            <OnPlatform x:TypeArguments="Color">
-                                <On Platform="iOS" Value="#3809e5" />
-                                <On Platform="Android" Value="#3a3a3a" />
+                    </controls:GradientContentView.StartColor>
+                    <controls:GradientContentView.EndColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="#38383a" />
+                            <On Platform="Android" Value="#000000" />
+                        </OnPlatform>
+                    </controls:GradientContentView.EndColor>
+                    <Label>
+                        <Label.IsVisible>
+                            <OnPlatform x:TypeArguments="x:Boolean">
+                                <On Platform="iOS" Value="false" />
+                                <On Platform="Android" Value="true" />
                             </OnPlatform>
-                        </controls:GradientContentView.StartColor>
-                        <controls:GradientContentView.EndColor>
-                            <OnPlatform x:TypeArguments="Color">
-                                <On Platform="iOS" Value="#38383a" />
-                                <On Platform="Android" Value="#000000" />
-                            </OnPlatform>
-                        </controls:GradientContentView.EndColor>
-                        <Label>
-                            <Label.IsVisible>
-                                <OnPlatform x:TypeArguments="x:Boolean">
-                                    <On Platform="iOS" Value="false" />
-                                    <On Platform="Android" Value="true" />
-                                </OnPlatform>
-                            </Label.IsVisible>
-                        </Label>
-                    </controls:GradientContentView>
-                </StackLayout>
+                        </Label.IsVisible>
+                    </Label>
+                </controls:GradientContentView>
+            </StackLayout>
+            <ScrollView
+                x:Name="mainScrollView"
+                HorizontalOptions="FillAndExpand"
+                Scrolled="mainScrollView_Scrolled"
+                VerticalOptions="FillAndExpand">
                 <StackLayout
                     x:Name="stkContainer"
                     Padding="12,0"
@@ -85,7 +85,7 @@
                         </flv:FlowListView.FlowColumnTemplate>
                     </flv:FlowListView>
                 </StackLayout>
-            </Grid>
-        </ScrollView>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

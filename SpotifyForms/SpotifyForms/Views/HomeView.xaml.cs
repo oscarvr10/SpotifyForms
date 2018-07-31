@@ -11,7 +11,7 @@ namespace SpotifyForms.Core.Views
 			InitializeComponent();
 		}
 
-        void Handle_Scrolled(object sender, ScrolledEventArgs e)
+        void mainScrollView_Scrolled(object sender, ScrolledEventArgs e)
         {
             if (gradientView.Height <= 0)
                 return;

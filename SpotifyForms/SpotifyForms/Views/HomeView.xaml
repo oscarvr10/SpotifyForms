@@ -12,7 +12,7 @@
         <ScrollView
             x:Name="mainScrollView"
             HorizontalOptions="FillAndExpand"
-            Scrolled="Handle_Scrolled"
+            Scrolled="mainScrollView_Scrolled"
             VerticalOptions="FillAndExpand">
             <Grid x:Name="mainGrid">
                 <StackLayout x:Name="gradientView" HeightRequest="220">

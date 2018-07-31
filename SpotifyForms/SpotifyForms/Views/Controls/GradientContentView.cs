@@ -7,6 +7,16 @@ namespace SpotifyForms.Core.Views.Controls
     /// </summary>
     public class GradientContentView : ContentView
     {
+        public float CornerRadius
+        {
+            get { return (float)GetValue(CornerRadiusProperty); }
+            set { SetValue(CornerRadiusProperty, value); }
+        }
+
+        public static readonly BindableProperty CornerRadiusProperty =
+        BindableProperty.Create("CornerRadius", typeof(float), typeof(GradientContentView), default(float));
+
+
         /// <summary>
         /// Start color of the gradient
         /// Defaults to White

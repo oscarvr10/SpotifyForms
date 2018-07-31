@@ -34,9 +34,9 @@ namespace SpotifyForms.Droid.Renderers
 
             if (GradientContentView != null)
             {
-                //ShapeDrawable sd = new ShapeDrawable(new RectShape());
                 GradientDrawable = new GradientDrawable();
                 GradientDrawable.SetColors(new int[] { GradientContentView.StartColor.ToAndroid(), GradientContentView.EndColor.ToAndroid() });
+                GradientDrawable.SetCornerRadius(GradientContentView.CornerRadius);
             }
         }
 
@@ -46,7 +46,6 @@ namespace SpotifyForms.Droid.Renderers
 
             if (GradientDrawable != null && GradientContentView != null)
             {
-
                 if (e.PropertyName == GradientContentView.StartColorProperty.PropertyName ||
                     e.PropertyName == GradientContentView.EndColorProperty.PropertyName)
                 {
@@ -66,6 +65,7 @@ namespace SpotifyForms.Droid.Renderers
         protected override bool DrawChild(Canvas canvas, global::Android.Views.View child, long drawingTime)
         {
             GradientDrawable.Bounds = canvas.ClipBounds;
+            
             switch (GradientContentView.Orientation)
             {
                 case GradientOrientation.Vertical:

@@ -42,7 +42,7 @@ namespace SpotifyForms.iOS.Renderers
                     GradientContentView.EndColor.ToCGColor()
                 };
                 SetOrientation();
-
+                GradientLayer.CornerRadius = (System.nfloat)GradientContentView.CornerRadius;
                 NativeView.Layer.InsertSublayer(GradientLayer, 0);
             }
         }

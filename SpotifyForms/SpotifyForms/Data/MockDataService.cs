@@ -35,11 +35,11 @@ namespace SpotifyForms.Core.Data
             return new List<Song>
             {
                 new Song(){ Artist="Muse", Title="Dig Down", LengthInSeconds=228, AlbumImageUrl="https://i.scdn.co/image/08d56eac0c7d48bb8bf7752b2202c3314db79394"},
-                new Song(){ Artist="Gorillaz", Title="Clint Eastwood", LengthInSeconds=341, AlbumImageUrl="https://i.scdn.co/image/6c6086f6922b9a44920310b34ef98161bd7adf78"},
+                new Song(){ Artist="Coldplay", Title="Fix You", LengthInSeconds=296, AlbumImageUrl="https://i.scdn.co/image/ce2cb283df41c592e72df1900558d8af97445aa6"},
                 new Song(){ Artist="Jamiroquai", Title="Virtual Insanity", LengthInSeconds=229, AlbumImageUrl="https://i.scdn.co/image/bb3810cd18de42b93c54536d7e9ab7f8c10a8229"},
-                new Song(){ Artist="Biffy Clyro", Title="The Captain", LengthInSeconds=223, AlbumImageUrl="https://i.scdn.co/image/f8d0b0bdf4a541fb2d13cb63e958aa760e3547e5"},
+                new Song(){ Artist="The Weeknd, Kendrick Lamar", Title="Sidewalks", LengthInSeconds=231, AlbumImageUrl="https://i.scdn.co/image/cb325fa498e7d386caef89887302d4340c39484c"},
                 new Song(){ Artist="System of a Down", Title="Hypnotize", LengthInSeconds=189, AlbumImageUrl="https://i.scdn.co/image/66eb75e0f3a8a91822ba7154e4b41066e63e51f2"},
-                new Song(){ Artist="Paramore", Title="Hard Times", LengthInSeconds=182, AlbumImageUrl="https://i.scdn.co/image/d8296568ae1b856050976111fa892d8db693efd5"},
+                new Song(){ Artist="Franz Ferdinand", Title="Always Ascending", LengthInSeconds=321, AlbumImageUrl="https://i.scdn.co/image/931e7a8fe23b8ff37c8f872258e3845d53ae2ea8"},
                 new Song(){ Artist="Sons Of Maria", Title="Take It to the Beat - Extended Mix", LengthInSeconds=270, AlbumImageUrl="https://s.mxmcdn.net/images-storage/albums5/3/6/1/3/6/4/36463163_500_500.jpg"}
             };
         }
@@ -72,7 +72,7 @@ namespace SpotifyForms.Core.Data
         {
             return new List<SearchCategory>
             {
-                new SearchCategory(){ Name="New Releases", StartColor = Color.DarkBlue, EndColor=Color.DarkRed },
+                new SearchCategory(){ Name="New Releases", StartColor = Color.DeepSkyBlue, EndColor=Color.IndianRed },
                 new SearchCategory(){ Name="Charts", StartColor = Color.DarkBlue, EndColor=Color.DarkOliveGreen},
                 new SearchCategory(){ Name="Podcasts", StartColor = Color.LightPink, EndColor=Color.Orange},
                 new SearchCategory(){ Name="Latin", StartColor = Color.LightBlue, EndColor=Color.Blue},
@@ -83,11 +83,11 @@ namespace SpotifyForms.Core.Data
                 new SearchCategory(){ Name="Romance", StartColor = Color.Gray, EndColor=Color.DarkRed},
                 new SearchCategory(){ Name="Comedy", StartColor = Color.DarkBlue, EndColor=Color.LightGray},
                 new SearchCategory(){ Name="Dinner", StartColor = Color.DarkRed, EndColor=Color.DarkOrange},
-                new SearchCategory(){ Name="Sleep", StartColor = Color.YellowGreen, EndColor=Color.Yellow},
+                new SearchCategory(){ Name="Mood", StartColor = Color.YellowGreen, EndColor=Color.LawnGreen},
+                new SearchCategory(){ Name="Indie", StartColor = Color.MediumSeaGreen, EndColor=Color.CornflowerBlue},
                 new SearchCategory(){ Name="Rock", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
-                new SearchCategory(){ Name="Indie", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
-                new SearchCategory(){ Name="Punk", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
-                new SearchCategory(){ Name="Electronic/Dance", StartColor = Color.DarkBlue, EndColor=Color.DarkRed},
+                new SearchCategory(){ Name="Punk", StartColor = Color.DarkRed, EndColor=Color.Black},
+                new SearchCategory(){ Name="Electronic/Dance", StartColor = Color.LightSkyBlue, EndColor=Color.LightSeaGreen},
             };
         }
     }
