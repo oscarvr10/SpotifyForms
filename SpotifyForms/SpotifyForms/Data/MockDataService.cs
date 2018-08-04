@@ -10,11 +10,13 @@ namespace SpotifyForms.Core.Data
         {
             return new List<Playlist>
             {
-                new Playlist(){ Name="Funk Rock", NrOfFollowers=49205, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/a9cdead5cf5d85a33e7bc12b49d1006821650ca4"},
-                new Playlist(){ Name="Rock Solid", NrOfFollowers=5025, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/993ea43e0521938d5bf7a4fbe4f349acf6500975"},
-                new Playlist(){ Name="This Is: Muse", NrOfFollowers=2140415, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/3770c6d556b864e60684d0706013ff08dac76918"},
-                new Playlist(){ Name="100% Scooter", NrOfFollowers=7447, Editor="Spotify México", ImageUrl="https://www.geek.com/wp-content/uploads/2015/11/dirty-dubstep-dangle.jpeg"},
-                new Playlist(){ Name="Feeling Good, Feeling Great", NrOfFollowers=250211, Editor="Spotify México", ImageUrl="https://i.scdn.co/image/9c003edf2bcc3386c400d087b3bb4adb75ee1f5a"},
+                new Playlist(){ Name="Electrosafari", NrOfFollowers=49205, Editor="Spotify", ImageUrl="https://i.scdn.co/image/52fd7dc8b74691d3f25c83d3e2fccfcbf867ff3a"},
+                new Playlist(){ Name="Teen Party", NrOfFollowers=49205, Editor="Spotify", ImageUrl="https://i.scdn.co/image/83253e20ef94bf4bb896d72a58c85c4b7cb9ce62"},
+                new Playlist(){ Name="Funk Rock", NrOfFollowers=49205, Editor="Spotify", ImageUrl="https://i.scdn.co/image/a9cdead5cf5d85a33e7bc12b49d1006821650ca4"},
+                new Playlist(){ Name="Peaceful Indie Ambient", NrOfFollowers=5025, Editor="Spotify", ImageUrl="https://i.scdn.co/image/67c7e274072d3a4eef1fd1e95622b0a30f0285a3"},
+                new Playlist(){ Name="This Is: Muse", NrOfFollowers=2140415, Editor="Spotify", ImageUrl="https://i.scdn.co/image/3770c6d556b864e60684d0706013ff08dac76918"},
+                new Playlist(){ Name="100% Scooter", NrOfFollowers=7447, Editor="Spotify", ImageUrl="https://www.geek.com/wp-content/uploads/2015/11/dirty-dubstep-dangle.jpeg"},
+                new Playlist(){ Name="Feeling Good, Feeling Great", NrOfFollowers=250211, Editor="Spotify", ImageUrl="https://i.scdn.co/image/9c003edf2bcc3386c400d087b3bb4adb75ee1f5a"},
             };
         }
 
@@ -22,11 +24,11 @@ namespace SpotifyForms.Core.Data
         {
             return new List<Album>
             {
+                new Album(){ Artist="R3HAB", Name="Trouble", ImageUrl="https://i.scdn.co/image/b760eb0acb0f779f84e01d79767e744a4979c6fe"},
                 new Album(){ Artist="Royal Blood", Name="Royal Blood", ImageUrl="https://upload.wikimedia.org/wikipedia/en/b/b0/Royal_Blood_-_Royal_Blood_%28Artwork%29.jpg"},
-                new Album(){ Artist="Fall Out Boy", Name="Infinity On High", ImageUrl="https://upload.wikimedia.org/wikipedia/en/6/69/Infinityonhigh.jpg"},
-                new Album(){ Artist="Muse", Name="Drones", ImageUrl="https://upload.wikimedia.org/wikipedia/en/4/44/MuseDronesCover.jpg"},
                 new Album(){ Artist="System Of A Down", Name="Mesmerize", ImageUrl="https://upload.wikimedia.org/wikipedia/en/0/02/Mezmerize-LP.jpg"},
-                new Album(){ Artist="Muse", Name="Black Holes And Revelations", ImageUrl="https://upload.wikimedia.org/wikipedia/en/c/c5/BlackHolesCover.jpg"},
+                new Album(){ Artist="Fall Out Boy", Name="Infinity On High", ImageUrl="https://upload.wikimedia.org/wikipedia/en/6/69/Infinityonhigh.jpg"},
+                new Album(){ Artist="Muse", Name="The 2nd Law", ImageUrl="https://i.scdn.co/image/59fbbabeecaade686c44c99e5d1102130556bba1"},
             };
         }
 
@@ -34,12 +36,12 @@ namespace SpotifyForms.Core.Data
         {
             return new List<Song>
             {
-                new Song(){ Artist="Muse", Title="Dig Down", LengthInSeconds=228, AlbumImageUrl="https://i.scdn.co/image/08d56eac0c7d48bb8bf7752b2202c3314db79394"},
-                new Song(){ Artist="Coldplay", Title="Fix You", LengthInSeconds=296, AlbumImageUrl="https://i.scdn.co/image/ce2cb283df41c592e72df1900558d8af97445aa6"},
                 new Song(){ Artist="Jamiroquai", Title="Virtual Insanity", LengthInSeconds=229, AlbumImageUrl="https://i.scdn.co/image/bb3810cd18de42b93c54536d7e9ab7f8c10a8229"},
                 new Song(){ Artist="The Weeknd, Kendrick Lamar", Title="Sidewalks", LengthInSeconds=231, AlbumImageUrl="https://i.scdn.co/image/cb325fa498e7d386caef89887302d4340c39484c"},
+                new Song(){ Artist="Coldplay", Title="Fix You", LengthInSeconds=296, AlbumImageUrl="https://i.scdn.co/image/ce2cb283df41c592e72df1900558d8af97445aa6"},
                 new Song(){ Artist="System of a Down", Title="Hypnotize", LengthInSeconds=189, AlbumImageUrl="https://i.scdn.co/image/66eb75e0f3a8a91822ba7154e4b41066e63e51f2"},
                 new Song(){ Artist="Franz Ferdinand", Title="Always Ascending", LengthInSeconds=321, AlbumImageUrl="https://i.scdn.co/image/931e7a8fe23b8ff37c8f872258e3845d53ae2ea8"},
+                new Song(){ Artist="Muse", Title="Dig Down", LengthInSeconds=228, AlbumImageUrl="https://i.scdn.co/image/08d56eac0c7d48bb8bf7752b2202c3314db79394"},
                 new Song(){ Artist="Sons Of Maria", Title="Take It to the Beat - Extended Mix", LengthInSeconds=270, AlbumImageUrl="https://s.mxmcdn.net/images-storage/albums5/3/6/1/3/6/4/36463163_500_500.jpg"}
             };
         }
@@ -60,7 +62,7 @@ namespace SpotifyForms.Core.Data
         {
             return new List<Podcast>
             {
-                new Podcast(){ Name="Here For The Boos", Author="Spotify Radio", ImageUrl="http://myspotifyideas.com/images/2d9ba6aff299c69cb7b145e4c2b14b120cbdef5b-284.jpeg"},
+                new Podcast(){ Name="TRAINED", Author="Nike", ImageUrl="http://myspotifyideas.com/images/6e49107e91d90b8b672b6dc62db979a4ed872922-265.jpeg"},
                 new Podcast(){ Name="Dressed: The History of Fashion",Author="Fashion Stories", ImageUrl="http://myspotifyideas.com/images/83fb620984c2332a9e526a322a547668a8d658ee-265.jpeg"},
                 new Podcast(){ Name="Make Me Smart", Author="Kai and Molly", ImageUrl="http://myspotifyideas.com/images/0185d72c914bbd6bc6cebdf38925bb4a72201b07-265.jpeg"},
                 new Podcast(){ Name="In Our Time", Author="BBC Radio", ImageUrl="http://myspotifyideas.com/images/3f8660b8172c3692f90af57846fcea239750d5f3-265.jpeg"},
@@ -80,8 +82,6 @@ namespace SpotifyForms.Core.Data
                 new SearchCategory(){ Name="Decades", StartColor = Color.Pink, EndColor=Color.HotPink},
                 new SearchCategory(){ Name="Sleep", StartColor = Color.MediumPurple, EndColor=Color.LightPink},
                 new SearchCategory(){ Name="Focus", StartColor = Color.Green, EndColor=Color.GreenYellow},
-                new SearchCategory(){ Name="Romance", StartColor = Color.Gray, EndColor=Color.DarkRed},
-                new SearchCategory(){ Name="Comedy", StartColor = Color.DarkBlue, EndColor=Color.LightGray},
                 new SearchCategory(){ Name="Dinner", StartColor = Color.DarkRed, EndColor=Color.DarkOrange},
                 new SearchCategory(){ Name="Mood", StartColor = Color.YellowGreen, EndColor=Color.LawnGreen},
                 new SearchCategory(){ Name="Indie", StartColor = Color.MediumSeaGreen, EndColor=Color.CornflowerBlue},
