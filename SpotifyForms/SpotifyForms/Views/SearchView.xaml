@@ -8,84 +8,123 @@
     xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
     BackgroundColor="#111111">
     <ContentPage.Content>
-        <Grid x:Name="gridContainer">
-            <StackLayout x:Name="gradientView" HeightRequest="220">
-                <StackLayout.Margin>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="0,-90,0,0" />
-                        <On Platform="Android" Value="0,0,0,0" />
-                    </OnPlatform>
-                </StackLayout.Margin>
-                <controls:GradientContentView
-                    Padding="12"
-                    HeightRequest="220"
-                    Orientation="Vertical">
-                    <controls:GradientContentView.StartColor>
-                        <OnPlatform x:TypeArguments="Color">
-                            <On Platform="iOS" Value="#3809e5" />
-                            <On Platform="Android" Value="#3a3a3a" />
-                        </OnPlatform>
-                    </controls:GradientContentView.StartColor>
-                    <controls:GradientContentView.EndColor>
-                        <OnPlatform x:TypeArguments="Color">
-                            <On Platform="iOS" Value="#38383a" />
-                            <On Platform="Android" Value="#000000" />
-                        </OnPlatform>
-                    </controls:GradientContentView.EndColor>
-                    <Label>
-                        <Label.IsVisible>
-                            <OnPlatform x:TypeArguments="x:Boolean">
-                                <On Platform="iOS" Value="false" />
-                                <On Platform="Android" Value="true" />
-                            </OnPlatform>
-                        </Label.IsVisible>
-                    </Label>
-                </controls:GradientContentView>
-            </StackLayout>
+        <StackLayout x:Name="gridContainer">
             <ScrollView
                 x:Name="mainScrollView"
                 HorizontalOptions="FillAndExpand"
                 Scrolled="mainScrollView_Scrolled"
                 VerticalOptions="FillAndExpand">
-                <StackLayout
-                    x:Name="stkContainer"
-                    Padding="12,0"
-                    Spacing="20">
-                    <StackLayout.Margin>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="iOS" Value="0,50,0,0" />
-                            <On Platform="Android" Value="0,120,0,0" />
-                        </OnPlatform>
-                    </StackLayout.Margin>
-                    <Label
-                        Margin="0,0,0,5"
-                        FontSize="48"
-                        HorizontalOptions="CenterAndExpand"
-                        Style="{StaticResource BoldLabel}"
-                        Text="Search"
-                        TextColor="White" />
-                    <SearchBar
-                        Margin="8,0"
-                        BackgroundColor="White"
-                        FontSize="Medium"
-                        HeightRequest="60"
-                        Placeholder="Artists, songs or podcasts"
-                        TextColor="Gray" />
-                    <flv:FlowListView
-                        x:Name="flvCategories"
-                        BackgroundColor="Black"
-                        FlowColumnCount="2"
-                        FlowItemsSource="{Binding SearchCategories}"
-                        HasUnevenRows="True"
-                        RowHeight="120">
-                        <flv:FlowListView.FlowColumnTemplate>
-                            <DataTemplate>
-                                <cells:SearchCategoryCell />
-                            </DataTemplate>
-                        </flv:FlowListView.FlowColumnTemplate>
-                    </flv:FlowListView>
-                </StackLayout>
+                <Grid InputTransparent="true">
+                    <StackLayout x:Name="gradientView" HeightRequest="250">
+                        <StackLayout.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS" Value="0,-90,0,0" />
+                                <On Platform="Android" Value="0,0,0,0" />
+                            </OnPlatform>
+                        </StackLayout.Margin>
+                        <controls:GradientContentView
+                            Padding="12,0"
+                            HeightRequest="130"
+                            Orientation="Vertical">
+                            <controls:GradientContentView.StartColor>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="#3c18bf" />
+                                    <On Platform="Android" Value="#5e5e5e" />
+                                </OnPlatform>
+                            </controls:GradientContentView.StartColor>
+                            <controls:GradientContentView.EndColor>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="#38383a" />
+                                    <On Platform="Android" Value="#3a3a3a" />
+                                </OnPlatform>
+                            </controls:GradientContentView.EndColor>
+                            <Label>
+                                <Label.IsVisible>
+                                    <OnPlatform x:TypeArguments="x:Boolean">
+                                        <On Platform="iOS" Value="false" />
+                                        <On Platform="Android" Value="true" />
+                                    </OnPlatform>
+                                </Label.IsVisible>
+                            </Label>
+                        </controls:GradientContentView>
+                        <controls:GradientContentView
+                            Padding="12,0" 
+                            Margin="0,-10,0,0"
+                            HeightRequest="120"
+                            Orientation="Vertical">
+                            <controls:GradientContentView.StartColor>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="#3a3a3a" />
+                                    <On Platform="Android" Value="#3a3a3a" />
+                                </OnPlatform>
+                            </controls:GradientContentView.StartColor>
+                            <controls:GradientContentView.EndColor>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="#000000" />
+                                    <On Platform="Android" Value="#000000" />
+                                </OnPlatform>
+                            </controls:GradientContentView.EndColor>
+                            <Label>
+                                <Label.IsVisible>
+                                    <OnPlatform x:TypeArguments="x:Boolean">
+                                        <On Platform="iOS" Value="false" />
+                                        <On Platform="Android" Value="true" />
+                                    </OnPlatform>
+                                </Label.IsVisible>
+                            </Label>
+                        </controls:GradientContentView>
+                    </StackLayout>
+                    <StackLayout x:Name="stkContainer" Spacing="20" Padding="12">
+                        <StackLayout.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="iOS" Value="0,0,0,0" />
+                                <On Platform="Android" Value="0,60,0,0" />
+                            </OnPlatform>
+                        </StackLayout.Margin>
+                        <Label
+                            Margin="0,0,0,5"
+                            FontSize="48"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{StaticResource BoldLabel}"
+                            Text="Search"
+                            TextColor="White">
+                            <Label.IsVisible>
+                                <OnPlatform x:TypeArguments="x:Boolean">
+                                    <On Platform="iOS" Value="false" />
+                                    <On Platform="Android" Value="true" />
+                                </OnPlatform>
+                            </Label.IsVisible>
+                        </Label>
+                        <SearchBar
+                            BackgroundColor="White"
+                            FontSize="Medium"
+                            VerticalOptions="Center"
+                            HeightRequest="50"
+                            Placeholder="Artists, songs or podcasts"
+                            TextColor="Gray">
+                            <SearchBar.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="8,10,0,60" />
+                                    <On Platform="Android" Value="8,0" />
+                                </OnPlatform>
+                            </SearchBar.Margin>
+                        </SearchBar>
+                        <flv:FlowListView
+                            x:Name="flvCategories"
+                            BackgroundColor="Transparent"
+                            FlowColumnCount="2"
+                            FlowItemsSource="{Binding SearchCategories}"
+                            HasUnevenRows="True"
+                            RowHeight="95">
+                            <flv:FlowListView.FlowColumnTemplate>
+                                <DataTemplate>
+                                    <cells:SearchCategoryCell />
+                                </DataTemplate>
+                            </flv:FlowListView.FlowColumnTemplate>
+                        </flv:FlowListView>
+                    </StackLayout>
+                </Grid>
             </ScrollView>
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

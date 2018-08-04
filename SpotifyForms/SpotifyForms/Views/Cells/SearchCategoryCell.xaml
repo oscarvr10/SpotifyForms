@@ -7,11 +7,21 @@
     Padding="8">
     <controls:GradientContentView
         Padding="12"
-        CornerRadius="15"
         EndColor="{Binding EndColor}"
-        HeightRequest="70"
         Orientation="Vertical"
         StartColor="{Binding StartColor}">
+        <controls:GradientContentView.CornerRadius>
+            <OnPlatform x:TypeArguments="x:Single">
+                <On Platform="iOS" Value="5" />
+                <On Platform="Android" Value="15" />
+            </OnPlatform>
+        </controls:GradientContentView.CornerRadius>
+        <controls:GradientContentView.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="80" />
+                <On Platform="Android" Value="70" />
+            </OnPlatform>
+        </controls:GradientContentView.HeightRequest>
         <Label
             FontSize="Medium"
             Style="{StaticResource BoldLabel}"
