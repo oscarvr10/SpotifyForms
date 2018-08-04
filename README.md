@@ -1,5 +1,5 @@
 # SpotifyForms
-A Xamarin.Forms version based on new UI of the Spotify app free version for Android/iOS 
+A clone based on new UI of the Spotify app free version for Android/iOS built with Xamarin.Forms
 
 References:
 * Creating a good-looking Xamarin Forms UI: Spotify:
