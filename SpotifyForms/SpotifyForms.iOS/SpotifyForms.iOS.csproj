@@ -100,20 +100,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\button_back%402x.png" />
     <BundleResource Include="Resources\button_forward%402x.png" />
-    <BundleResource Include="Resources\button_pause2%402x.png" />
-    <BundleResource Include="Resources\button_play2%402x.png" />
-    <BundleResource Include="Resources\button_repeat%402x.png" />
-    <BundleResource Include="Resources\button_shuffle%402x.png" />
-    <BundleResource Include="Resources\icon_browse%402x.png" />
     <BundleResource Include="Resources\icon_chevron_down%402x.png" />
-    <BundleResource Include="Resources\icon_chevron_up%402x.png" />
     <BundleResource Include="Resources\icon_devices%402x.png" />
     <BundleResource Include="Resources\icon_ellipsis%402x.png" />
     <BundleResource Include="Resources\icon_library%402x.png" />
-    <BundleResource Include="Resources\icon_play_small%402x.png" />
-    <BundleResource Include="Resources\icon_playlist%402x.png" />
-    <BundleResource Include="Resources\icon_plus%402x.png" />
-    <BundleResource Include="Resources\icon_radio%402x.png" />
     <BundleResource Include="Resources\icon_search%402x.png" />
     <BundleResource Include="Resources\slider_max_track%402x.png" />
     <BundleResource Include="Resources\small_slider%402x.png" />
@@ -134,6 +124,7 @@
     <BundleResource Include="Resources\button_pause%402x.png" />
     <BundleResource Include="Resources\button_play%402x.png" />
     <Compile Include="Renderers\GradientTabbedPageRenderer.cs" />
+    <BundleResource Include="Resources\icon_pause_small%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

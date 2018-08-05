@@ -82,6 +82,10 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\font\circular_bold.ttf" />
+    <AndroidResource Include="Resources\drawable\icon_favorite.png" />
+    <AndroidResource Include="Resources\drawable\icon_pause_small.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\button_nofav.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\button_unfav.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -100,10 +104,6 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\button_play2.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\button_pause2.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon_home2.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon_library2.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon_settings.png" />
   </ItemGroup>
   <ItemGroup>
@@ -123,21 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\button_forward.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\button_pause.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\button_play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\button_repeat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\button_shuffle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\icon_browse.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\icon_chevron_down.png" />
