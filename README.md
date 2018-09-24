@@ -3,13 +3,13 @@ A clone based on new UI of the Spotify app free version for Android/iOS built wi
 
 ###### Android Version
 
-![Home and Player](https://media.giphy.com/media/1ykCsrHhfHpYAi1MZ9/giphy.gif)
-![Search and Library](https://media.giphy.com/media/3OwRPJaAfV1Bs4qySK/giphy.gif)
+![Home and Player](https://media.giphy.com/media/1ykCsrHhfHpYAi1MZ9/200w_d.gif)
+![Search and Library](https://media.giphy.com/media/3OwRPJaAfV1Bs4qySK/200w_d.gif)
 
 ###### iOS Version
 
-![Home and Player](https://media.giphy.com/media/3WuUg8zzORMwYa6Ori/giphy.gif)
-![Search and Library](https://media.giphy.com/media/1SyXrQphferEj7Y2sT/giphy.gif)
+![Home and Player](https://media.giphy.com/media/3WuUg8zzORMwYa6Ori/200w_d.gif)
+![Search and Library](https://media.giphy.com/media/1SyXrQphferEj7Y2sT/200w_d.gif)
 
 ## References:
 - Creating a good-looking Xamarin Forms UI: Spotify:
